@@ -233,6 +233,8 @@ quadrantChart
 | 6 | **Nhà cung cấp thanh toán** | Xử lý các giao dịch thanh toán điện tử |
 | 7 | **Nhà cung cấp thông báo** | Gửi thông báo đến khách hàng và tài xế |
 
+## 7.2/ Sơ đồ use case
+
 
 ## 8/ Đặt tả use case
 ## 9/ Phân tích quy trình nghiệp vụ (Business Project)
