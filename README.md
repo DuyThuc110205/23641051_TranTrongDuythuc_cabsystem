@@ -234,7 +234,7 @@ quadrantChart
 | 7 | **Nhà cung cấp thông báo** | Gửi thông báo đến khách hàng và tài xế |
 
 ## 7.2/ Sơ đồ use case
-
+![CAB System Use Case Diagram](use-case-diagram.jpg)
 
 ## 8/ Đặt tả use case
 ## 9/ Phân tích quy trình nghiệp vụ (Business Project)
