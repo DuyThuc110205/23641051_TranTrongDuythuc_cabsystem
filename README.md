@@ -224,14 +224,13 @@ quadrantChart
 ## 7/ Vẽ use case
 ## 7.1/ Xác định Actors
 | STT | Actor | Vai trò |
-|---:|---|---|
-| 1 | **Khách hàng** | Người đặt và sử dụng dịch vụ xe |
-| 2 | **Tài xế** | Người nhận và thực hiện chuyến xe |
-| 3 | **Nhân viên vận hành** | Theo dõi, quản lý và xử lý các hoạt động vận hành |
-| 4 | **Nhân viên tài chính / kế toán** | Theo dõi và tra cứu giao dịch, doanh thu |
-| 5 | **Quản lý / Ban giám đốc** | Theo dõi báo cáo và hiệu quả hoạt động |
-| 6 | **Nhà cung cấp thanh toán** | Xử lý các giao dịch thanh toán điện tử |
-| 7 | **Nhà cung cấp thông báo** | Gửi thông báo đến khách hàng và tài xế |
+| :---: | :--- | :--- |
+| 1 | **Khách hàng** | Sử dụng dịch vụ đặt xe: đăng ký, đăng nhập, quản lý thông tin cá nhân, đặt xe, theo dõi chuyến, hủy chuyến, thanh toán, xem lịch sử và đánh giá tài xế. |
+| 2 | **Tài xế** | Cung cấp dịch vụ vận chuyển: quản lý hồ sơ và phương tiện, cập nhật trạng thái hoạt động, nhận hoặc từ chối chuyến, cập nhật trạng thái chuyến và vị trí. |
+| 3 | **Nhân viên vận hành** | Điều phối và giám sát hoạt động đặt xe; quản lý thông tin khách hàng, tài xế, phương tiện; theo dõi chuyến đi, hỗ trợ xử lý sự cố, tra cứu giao dịch và phân quyền theo chức năng được cấp. |
+| 4 | **Ban giám đốc** | Theo dõi tình hình hoạt động và hiệu quả kinh doanh thông qua các báo cáo về số lượng chuyến, doanh thu, tỷ lệ hoàn thành, tỷ lệ hủy và hiệu quả tài xế. |
+| 5 | **Nhà cung cấp thanh toán** | Tiếp nhận và xử lý các giao dịch thanh toán điện tử, sau đó trả kết quả giao dịch cho hệ thống CAB. |
+| 6 | **Nhà cung cấp thông báo** | Cung cấp dịch vụ gửi thông báo đến khách hàng và tài xế về các sự kiện trong quá trình đặt và thực hiện chuyến. |
 
 ## 7.2/ Sơ đồ use case
 ![CAB System Use Case Diagram](use-case-diagram.jpg)
