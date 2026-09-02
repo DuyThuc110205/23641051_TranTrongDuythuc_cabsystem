@@ -16,18 +16,18 @@
 
 ## 2/ Stakeholder Power–Interest Matrix
 ### 2.1/ Phân loại Stakeholder theo Power – Interest
-| Nhóm | Tên nhóm | Stakeholder | Power | Interest | Chiến lược quản lý |
-|---|---|---|---|---|---|
-| **1** | **Quản lý chặt chẽ** | **Ban giám đốc / Chủ doanh nghiệp** | Cao | Cao | Tham gia thường xuyên, xác nhận phạm vi, yêu cầu và các quyết định quan trọng |
-| | | **Nhân viên vận hành** | Cao | Cao | Làm việc trực tiếp, thu thập yêu cầu và lấy phản hồi thường xuyên |
-| | | **Bộ phận Kỹ thuật / IT** | Cao | Cao | Phối hợp chặt chẽ về kỹ thuật, bảo mật, hiệu năng và khả năng mở rộng |
-| **2** | **Duy trì sự hài lòng** | **Bộ phận Tài chính / Kế toán** | Cao | Trung bình | Đảm bảo các yêu cầu về thanh toán, giao dịch và doanh thu |
-| | | **Bộ phận Kinh doanh & Marketing** | Cao | Trung bình | Đảm bảo có dữ liệu cần thiết để theo dõi hoạt động kinh doanh |
-| **3** | **Cập nhật thông tin** | **Khách hàng** | Thấp – Trung bình | Cao | Thu thập nhu cầu, phản hồi và ưu tiên trải nghiệm người dùng |
-| | | **Tài xế** | Thấp – Trung bình | Cao | Khảo sát quy trình thực tế và thu thập phản hồi |
-| | | **Nhà cung cấp thanh toán bên ngoài** | Trung bình | Trung bình – Cao | Trao đổi yêu cầu tích hợp, trạng thái giao dịch và xử lý lỗi |
-| | | **Nhà cung cấp dịch vụ thông báo** | Trung bình | Trung bình – Cao | Đảm bảo yêu cầu tích hợp và khả năng mở rộng kênh thông báo |
-| **4** | **Theo dõi** | **Chưa xác định** | Thấp | Thấp | Chỉ cần theo dõi, không cần tham gia thường xuyên |
+| Nhóm | Tên nhóm | Stakeholder | Chiến lược quản lý |
+|---|---|---|---|
+| **1** | **Quản lý chặt chẽ** | **Ban giám đốc / Chủ doanh nghiệp** | Tham gia thường xuyên, xác nhận phạm vi, yêu cầu và các quyết định quan trọng |
+| | | **Nhân viên vận hành** | Làm việc trực tiếp, thu thập yêu cầu và lấy phản hồi thường xuyên |
+| | | **Bộ phận Kỹ thuật / IT** | Phối hợp chặt chẽ về kỹ thuật, bảo mật, hiệu năng và khả năng mở rộng |
+| **2** | **Duy trì sự hài lòng** | **Bộ phận Tài chính / Kế toán** | Đảm bảo các yêu cầu về thanh toán, giao dịch và doanh thu |
+| | | **Bộ phận Kinh doanh & Marketing** | Đảm bảo có dữ liệu cần thiết để theo dõi hoạt động kinh doanh |
+| **3** | **Cập nhật thông tin** | **Khách hàng** | Thu thập nhu cầu, phản hồi và ưu tiên trải nghiệm người dùng |
+| | | **Tài xế** | Khảo sát quy trình thực tế và thu thập phản hồi |
+| | | **Nhà cung cấp thanh toán bên ngoài** | Trao đổi yêu cầu tích hợp, trạng thái giao dịch và xử lý lỗi |
+| | | **Nhà cung cấp dịch vụ thông báo** | Đảm bảo yêu cầu tích hợp và khả năng mở rộng kênh thông báo |
+| **4** | **Theo dõi** | **Chưa xác định** | Chỉ cần theo dõi, không cần tham gia thường xuyên |
 
 ### 2.2/ Ma trận 2 chiều phân loại Stakeholder theo:
 - **Trục X:** Mức độ quan tâm (Interest)
@@ -97,128 +97,67 @@ quadrantChart
 ### **BẢNG YÊU CẦU NGHIỆP VỤ (BUSINESS REQUIREMENTS)**
 | ID | Business Requirement | Mô tả |
 |---|---|---|
-| **BR-01** | Quản lý dịch vụ đặt xe | Hệ thống phải hỗ trợ doanh nghiệp cung cấp dịch vụ đặt xe trực tuyến từ khi khách hàng tạo yêu cầu đến khi chuyến đi hoàn thành. |
-| **BR-02** | Quản lý khách hàng | Hệ thống phải cho phép doanh nghiệp quản lý thông tin tài khoản và hồ sơ của khách hàng sử dụng dịch vụ. |
-| **BR-03** | Quản lý tài xế | Hệ thống phải hỗ trợ doanh nghiệp quản lý tài khoản, hồ sơ, trạng thái hoạt động và thông tin liên quan của tài xế. |
-| **BR-04** | Quản lý phương tiện | Hệ thống phải cho phép quản lý thông tin phương tiện được sử dụng để cung cấp dịch vụ vận chuyển. |
-| **BR-05** | Tự động tìm và phân công tài xế | Hệ thống phải hỗ trợ tự động tìm tài xế phù hợp dựa trên vị trí, trạng thái sẵn sàng và các tiêu chí vận hành được doanh nghiệp xác định. |
-| **BR-06** | Xử lý trường hợp tài xế không nhận chuyến | Hệ thống phải tiếp tục tìm tài xế khác khi tài xế được đề xuất không phản hồi hoặc từ chối chuyến, không yêu cầu khách hàng tạo lại yêu cầu. |
-| **BR-07** | Quản lý quá trình thực hiện chuyến | Hệ thống phải hỗ trợ doanh nghiệp và các bên liên quan theo dõi chuyến đi từ lúc đặt xe đến khi hoàn thành hoặc bị hủy. |
-| **BR-08** | Theo dõi vị trí và thời gian dự kiến | Hệ thống phải sử dụng thông tin vị trí của tài xế để hỗ trợ tìm tài xế gần khách hàng và cung cấp thời gian dự kiến tài xế đến. |
-| **BR-09** | Tính cước chuyến đi | Hệ thống phải xác định số tiền khách hàng phải trả dựa trên loại dịch vụ và thông tin của chuyến đi. |
-| **BR-10** | Hỗ trợ thanh toán | Hệ thống phải hỗ trợ thanh toán bằng tiền mặt và thanh toán điện tử thông qua nhà cung cấp thanh toán bên ngoài. |
-| **BR-11** | Quản lý kết quả thanh toán | Hệ thống phải ghi nhận trạng thái giao dịch và thông báo cho khách hàng khi thanh toán thành công hoặc thất bại; cho phép xử lý lại giao dịch thất bại theo chính sách doanh nghiệp. |
-| **BR-12** | Quản lý thông báo | Hệ thống phải cung cấp thông báo kịp thời cho khách hàng và tài xế về các sự kiện quan trọng trong quá trình đặt và thực hiện chuyến. |
-| **BR-13** | Hỗ trợ vận hành | Hệ thống phải cung cấp giao diện để nhân viên vận hành theo dõi chuyến, trạng thái tài xế và xử lý các trường hợp chuyến bị lỗi. |
-| **BR-14** | Quản lý và tra cứu dữ liệu | Hệ thống phải tập trung dữ liệu khách hàng, tài xế, phương tiện, chuyến đi và giao dịch để hỗ trợ quản lý và tra cứu. |
-| **BR-15** | Báo cáo hoạt động kinh doanh | Hệ thống phải cung cấp các báo cáo cơ bản về số lượng chuyến, doanh thu, tỷ lệ hoàn thành, tỷ lệ hủy và hiệu quả hoạt động của tài xế. |
-| **BR-16** | Đánh giá chất lượng dịch vụ | Hệ thống phải cho phép khách hàng đánh giá tài xế sau khi chuyến đi hoàn thành để doanh nghiệp theo dõi chất lượng dịch vụ. |
-| **BR-17** | Kiểm soát quyền truy cập | Hệ thống phải đảm bảo các chức năng và dữ liệu quản trị chỉ được truy cập bởi nhân viên có quyền phù hợp. |
-| **BR-18** | Bảo vệ dữ liệu | Hệ thống phải bảo vệ thông tin cá nhân, thông tin phương tiện, dữ liệu vị trí và dữ liệu giao dịch của người dùng. |
-| **BR-19** | Lưu vết hoạt động | Hệ thống phải lưu lại các thao tác quan trọng để phục vụ kiểm tra và xử lý sự cố khi cần thiết. |
-| **BR-20** | Đảm bảo tính ổn định của dịch vụ | Hệ thống phải hạn chế việc một thành phần gặp lỗi, như thanh toán hoặc thông báo, làm gián đoạn toàn bộ hoạt động đặt xe. |
-| **BR-21** | Hỗ trợ mở rộng hệ thống | Hệ thống phải có khả năng mở rộng để phục vụ số lượng lớn khách hàng, tài xế và chuyến đi khi hoạt động kinh doanh phát triển. |
+| **BR-01** | Quản lý đặt xe | Hệ thống hỗ trợ đặt và thực hiện chuyến đi từ khi tạo yêu cầu đến khi hoàn thành hoặc hủy. |
+| **BR-02** | Quản lý khách hàng | Hệ thống quản lý tài khoản và thông tin hồ sơ khách hàng. |
+| **BR-03** | Quản lý tài xế | Hệ thống quản lý tài khoản, hồ sơ và trạng thái hoạt động của tài xế. |
+| **BR-04** | Quản lý phương tiện | Hệ thống quản lý thông tin phương tiện phục vụ vận chuyển. |
+| **BR-05** | Tìm và phân công tài xế | Hệ thống tự động tìm và phân công tài xế phù hợp dựa trên vị trí, trạng thái và tiêu chí vận hành. |
+| **BR-06** | Xử lý tài xế không nhận chuyến | Hệ thống tự động tìm tài xế khác khi tài xế từ chối hoặc không phản hồi. |
+| **BR-07** | Theo dõi chuyến đi | Hệ thống hỗ trợ theo dõi trạng thái, vị trí và thời gian dự kiến của chuyến đi. |
+| **BR-08** | Tính cước và thanh toán | Hệ thống tính cước và hỗ trợ thanh toán tiền mặt hoặc thanh toán điện tử qua nhà cung cấp bên ngoài. |
+| **BR-09** | Xử lý kết quả thanh toán | Hệ thống ghi nhận trạng thái giao dịch, thông báo kết quả và hỗ trợ xử lý lại khi thanh toán thất bại. |
+| **BR-10** | Quản lý thông báo | Hệ thống gửi thông báo cho khách hàng và tài xế về các sự kiện quan trọng của chuyến đi. |
+| **BR-11** | Hỗ trợ vận hành | Hệ thống hỗ trợ nhân viên vận hành theo dõi chuyến, trạng thái tài xế và xử lý sự cố. |
+| **BR-12** | Quản lý và tra cứu dữ liệu | Hệ thống tập trung và hỗ trợ tra cứu dữ liệu khách hàng, tài xế, phương tiện, chuyến đi và giao dịch. |
+| **BR-13** | Báo cáo hoạt động | Hệ thống cung cấp báo cáo về số chuyến, doanh thu, tỷ lệ hoàn thành, tỷ lệ hủy và hiệu quả tài xế. |
+| **BR-14** | Đánh giá dịch vụ | Hệ thống cho phép khách hàng đánh giá tài xế sau khi chuyến đi hoàn thành. |
+| **BR-15** | Bảo mật và phân quyền | Hệ thống kiểm soát quyền truy cập và bảo vệ thông tin người dùng, phương tiện, vị trí và giao dịch. |
+| **BR-16** | Lưu vết hoạt động | Hệ thống ghi nhận các thao tác quan trọng để kiểm tra và xử lý sự cố. |
+| **BR-17** | Đảm bảo ổn định và mở rộng | Hệ thống phải hoạt động ổn định và có khả năng mở rộng khi số lượng người dùng và chuyến đi tăng. |
 
 
 ## 6/ Functional Requirements
 ### BẢNG PHÂN RÃ YÊU CẦU CHỨC NĂNG (FUNCTIONAL REQUIREMENTS)
 | ID | Business Requirement | Functional Requirement |
 |---|---|---|
-| **FR-01.01** | **BR-01 Quản lý dịch vụ đặt xe** | Hệ thống cho phép khách hàng tạo yêu cầu đặt xe. |
-| **FR-01.02** | | Hệ thống tiếp nhận và ghi nhận yêu cầu đặt xe. |
-| **FR-01.03** | | Hệ thống cập nhật trạng thái xử lý của yêu cầu đặt xe. |
-| **FR-01.04** | | Hệ thống cho phép hủy yêu cầu/chuyến đi theo chính sách được xác định. |
-| **FR-02.01** | **BR-02 Quản lý khách hàng** | Hệ thống cho phép khách hàng đăng ký tài khoản. |
-| **FR-02.02** | | Hệ thống cho phép khách hàng đăng nhập và đăng xuất. |
-| **FR-02.03** | | Hệ thống cho phép khách hàng cập nhật thông tin cá nhân. |
-| **FR-02.04** | | Hệ thống lưu trữ và quản lý thông tin tài khoản khách hàng. |
-| **FR-03.01** | **BR-03 Quản lý tài xế** | Hệ thống cho phép tạo tài khoản tài xế. |
-| **FR-03.02** | | Hệ thống cho phép tài xế cập nhật thông tin hồ sơ. |
-| **FR-03.03** | | Hệ thống cho phép tài xế chuyển đổi trạng thái sẵn sàng/không sẵn sàng nhận chuyến. |
-| **FR-03.04** | | Hệ thống ghi nhận trạng thái hoạt động hiện tại của tài xế. |
-| **FR-04.01** | **BR-04 Quản lý phương tiện** | Hệ thống cho phép nhân viên vận hành tạo thông tin phương tiện. |
-| **FR-04.02** | | Hệ thống cho phép cập nhật thông tin phương tiện. |
-| **FR-04.03** | | Hệ thống cho phép liên kết phương tiện với tài xế. |
-| **FR-04.04** | | Hệ thống lưu trữ thông tin phương tiện để phục vụ quản lý chuyến đi. |
-| **FR-05.01** | **BR-05 Tìm & phân công tài xế** | Hệ thống xác định các tài xế đang sẵn sàng nhận chuyến. |
-| **FR-05.02** | | Hệ thống xác định vị trí hiện tại của các tài xế phù hợp. |
-| **FR-05.03** | | Hệ thống lọc tài xế theo các tiêu chí vận hành được cấu hình. |
-| **FR-05.04** | | Hệ thống ưu tiên tài xế phù hợp và gần điểm đón. |
-| **FR-05.05** | | Hệ thống gửi yêu cầu nhận chuyến đến tài xế được lựa chọn. |
-| **FR-05.06** | | Hệ thống ghi nhận tài xế đã nhận chuyến. |
-| **FR-06.01** | **BR-06 Xử lý tài xế không nhận chuyến** | Hệ thống ghi nhận trường hợp tài xế từ chối chuyến. |
-| **FR-06.02** | | Hệ thống xác định trường hợp tài xế không phản hồi trong thời gian quy định. |
-| **FR-06.03** | | Hệ thống tự động chuyển yêu cầu sang tài xế phù hợp tiếp theo. |
-| **FR-06.04** | | Hệ thống tiếp tục tìm tài xế khác cho đến khi tìm được tài xế hoặc hết tài xế phù hợp. |
-| **FR-06.05** | | Hệ thống thông báo cho khách hàng khi không tìm được tài xế. |
-| **FR-07.01** | **BR-07 Quản lý chuyến đi** | Hệ thống tạo chuyến đi sau khi tài xế nhận yêu cầu. |
-| **FR-07.02** | | Hệ thống cho phép tài xế cập nhật trạng thái **đã đến điểm đón**. |
-| **FR-07.03** | | Hệ thống cho phép tài xế cập nhật trạng thái **đã đón khách**. |
-| **FR-07.04** | | Hệ thống cho phép tài xế cập nhật trạng thái **đang di chuyển**. |
-| **FR-07.05** | | Hệ thống cho phép tài xế cập nhật trạng thái **hoàn thành chuyến**. |
-| **FR-07.06** | | Hệ thống cho phép xử lý trạng thái **hủy chuyến**. |
-| **FR-07.07** | | Hệ thống lưu lại lịch sử và trạng thái của chuyến đi. |
-| **FR-08.01** | **BR-08 Theo dõi vị trí & ETA** | Hệ thống ghi nhận vị trí hiện tại của tài xế. |
-| **FR-08.02** | | Hệ thống cập nhật vị trí tài xế trong quá trình thực hiện chuyến. |
-| **FR-08.03** | | Hệ thống sử dụng vị trí tài xế để hỗ trợ tìm tài xế phù hợp. |
-| **FR-08.04** | | Hệ thống cung cấp thời gian dự kiến tài xế đến cho khách hàng. |
-| **FR-08.05** | | Hệ thống hiển thị thông tin vị trí/trạng thái chuyến cho khách hàng. |
-| **FR-09.01** | **BR-09 Tính cước** | Hệ thống xác định loại dịch vụ của chuyến đi. |
-| **FR-09.02** | | Hệ thống thu thập thông tin cần thiết để tính cước. |
-| **FR-09.03** | | Hệ thống tính số tiền khách hàng phải trả theo quy tắc tính cước. |
-| **FR-09.04** | | Hệ thống lưu số tiền phải trả của chuyến đi. |
-| **FR-10.01** | **BR-10 Thanh toán** | Hệ thống cho phép khách hàng lựa chọn thanh toán bằng tiền mặt. |
-| **FR-10.02** | | Hệ thống cho phép khách hàng lựa chọn thanh toán điện tử. |
-| **FR-10.03** | | Hệ thống gửi yêu cầu thanh toán điện tử đến nhà cung cấp thanh toán. |
-| **FR-10.04** | | Hệ thống nhận kết quả giao dịch từ nhà cung cấp thanh toán. |
-| **FR-10.05** | | Hệ thống không lưu trực tiếp thông tin nhạy cảm của thẻ/tài khoản thanh toán. |
-| **FR-11.01** | **BR-11 Quản lý kết quả thanh toán** | Hệ thống ghi nhận trạng thái giao dịch thanh toán. |
-| **FR-11.02** | | Hệ thống thông báo cho khách hàng khi thanh toán thành công. |
-| **FR-11.03** | | Hệ thống thông báo cho khách hàng khi thanh toán thất bại. |
-| **FR-11.04** | | Hệ thống cho phép thực hiện lại thanh toán khi giao dịch thất bại theo chính sách doanh nghiệp. |
-| **FR-12.01** | **BR-12 Thông báo** | Hệ thống thông báo cho khách hàng khi yêu cầu đặt xe được tiếp nhận. |
-| **FR-12.02** | | Hệ thống thông báo cho khách hàng khi tài xế nhận chuyến. |
-| **FR-12.03** | | Hệ thống thông báo khi tài xế đến điểm đón. |
-| **FR-12.04** | | Hệ thống thông báo khi chuyến đi hoàn thành. |
-| **FR-12.05** | | Hệ thống thông báo kết quả thanh toán. |
-| **FR-12.06** | | Hệ thống thông báo cho tài xế khi có chuyến mới. |
-| **FR-12.07** | | Hệ thống thông báo cho tài xế khi có thay đổi liên quan đến chuyến đang thực hiện. |
-| **FR-13.01** | **BR-13 Hỗ trợ vận hành** | Hệ thống cung cấp giao diện quản trị cho nhân viên vận hành. |
-| **FR-13.02** | | Nhân viên vận hành có thể xem danh sách chuyến đang diễn ra. |
-| **FR-13.03** | | Nhân viên vận hành có thể kiểm tra trạng thái tài xế. |
-| **FR-13.04** | | Nhân viên vận hành có thể tra cứu thông tin khách hàng, tài xế và phương tiện. |
-| **FR-13.05** | | Nhân viên vận hành có thể tra cứu lịch sử chuyến đi. |
-| **FR-13.06** | | Nhân viên vận hành có thể tra cứu lịch sử giao dịch. |
-| **FR-13.07** | | Nhân viên vận hành có thể hỗ trợ xử lý các trường hợp chuyến bị lỗi. |
-| **FR-14.01** | **BR-14 Quản lý & tra cứu dữ liệu** | Hệ thống lưu trữ tập trung thông tin khách hàng. |
-| **FR-14.02** | | Hệ thống lưu trữ tập trung thông tin tài xế và phương tiện. |
-| **FR-14.03** | | Hệ thống lưu trữ thông tin chuyến đi. |
-| **FR-14.04** | | Hệ thống lưu trữ thông tin giao dịch. |
-| **FR-14.05** | | Người dùng có quyền có thể tìm kiếm và tra cứu dữ liệu. |
-| **FR-15.01** | **BR-15 Báo cáo** | Hệ thống cung cấp báo cáo số lượng chuyến. |
-| **FR-15.02** | | Hệ thống cung cấp báo cáo doanh thu. |
-| **FR-15.03** | | Hệ thống cung cấp tỷ lệ chuyến hoàn thành. |
-| **FR-15.04** | | Hệ thống cung cấp tỷ lệ chuyến hủy. |
-| **FR-15.05** | | Hệ thống cung cấp thông tin hiệu quả hoạt động của tài xế. |
-| **FR-16.01** | **BR-16 Đánh giá tài xế** | Hệ thống cho phép khách hàng đánh giá tài xế sau khi hoàn thành chuyến. |
-| **FR-16.02** | | Hệ thống lưu kết quả đánh giá của khách hàng. |
-| **FR-16.03** | | Hệ thống cho phép doanh nghiệp tra cứu kết quả đánh giá. |
-| **FR-17.01** | **BR-17 Kiểm soát quyền truy cập** | Hệ thống xác thực khách hàng và tài xế trước khi sử dụng chức năng yêu cầu tài khoản. |
-| **FR-17.02** | | Hệ thống xác thực nhân viên trước khi truy cập giao diện quản trị. |
-| **FR-17.03** | | Hệ thống phân quyền chức năng theo vai trò người dùng. |
-| **FR-17.04** | | Hệ thống ngăn người dùng thực hiện chức năng ngoài quyền được cấp. |
-| **FR-18.01** | **BR-18 Bảo vệ dữ liệu** | Hệ thống kiểm soát quyền truy cập thông tin cá nhân. |
-| **FR-18.02** | | Hệ thống bảo vệ thông tin phương tiện và dữ liệu vị trí. |
-| **FR-18.03** | | Hệ thống bảo vệ dữ liệu giao dịch và thanh toán. |
-| **FR-19.01** | **BR-19 Lưu vết hoạt động** | Hệ thống ghi nhận các thao tác quản trị quan trọng. |
-| **FR-19.02** | | Hệ thống ghi nhận người thực hiện, thời gian và thao tác đã thực hiện. |
-| **FR-19.03** | | Người có quyền có thể tra cứu log phục vụ kiểm tra và xử lý sự cố. |
-| **FR-20.01** | **BR-20 Ổn định dịch vụ** | Hệ thống phải xử lý lỗi của dịch vụ thanh toán mà không làm dừng chức năng đặt xe. |
-| **FR-20.02** | | Hệ thống phải xử lý lỗi của dịch vụ thông báo mà không làm dừng chức năng đặt xe. |
-| **FR-20.03** | | Hệ thống phải ghi nhận các lỗi xảy ra trong quá trình xử lý để phục vụ kiểm tra. |
-| **FR-21.01** | **BR-21 Mở rộng hệ thống** | Hệ thống cho phép mở rộng khả năng phục vụ khi số lượng khách hàng và tài xế tăng. |
-| **FR-21.02** | | Các thành phần xử lý chính có thể được mở rộng độc lập khi cần thiết. |
-| **FR-21.03** | | Hệ thống hỗ trợ triển khai thêm chức năng mà hạn chế ảnh hưởng đến chức năng đang hoạt động. |
+| **FR-01.01** | **BR-01 Quản lý đặt xe** | Hệ thống cho phép khách hàng tạo, theo dõi và hủy yêu cầu/chuyến đi theo chính sách. |
+| **FR-02.01** | **BR-02 Quản lý khách hàng** | Hệ thống cho phép khách hàng đăng ký, đăng nhập và cập nhật thông tin cá nhân. |
+| **FR-02.02** | | Hệ thống lưu trữ và quản lý thông tin tài khoản khách hàng. |
+| **FR-03.01** | **BR-03 Quản lý tài xế** | Hệ thống cho phép tạo tài khoản, cập nhật hồ sơ và trạng thái hoạt động của tài xế. |
+| **FR-03.02** | | Hệ thống ghi nhận trạng thái sẵn sàng nhận chuyến của tài xế. |
+| **FR-04.01** | **BR-04 Quản lý phương tiện** | Hệ thống cho phép nhân viên vận hành tạo và cập nhật thông tin phương tiện. |
+| **FR-04.02** | | Hệ thống cho phép liên kết phương tiện với tài xế. |
+| **FR-05.01** | **BR-05 Tìm và phân công tài xế** | Hệ thống xác định tài xế phù hợp dựa trên vị trí, trạng thái và tiêu chí vận hành. |
+| **FR-05.02** | | Hệ thống ưu tiên và gửi yêu cầu chuyến đến tài xế phù hợp. |
+| **FR-05.03** | | Hệ thống ghi nhận tài xế được phân công và nhận chuyến. |
+| **FR-06.01** | **BR-06 Xử lý tài xế không nhận chuyến** | Hệ thống ghi nhận trường hợp tài xế từ chối hoặc không phản hồi. |
+| **FR-06.02** | | Hệ thống tự động tìm và gửi yêu cầu đến tài xế phù hợp tiếp theo. |
+| **FR-06.03** | | Hệ thống thông báo cho khách hàng khi không tìm được tài xế. |
+| **FR-07.01** | **BR-07 Theo dõi chuyến đi** | Hệ thống tạo và cập nhật trạng thái chuyến đi từ khi nhận chuyến đến khi hoàn thành hoặc hủy. |
+| **FR-07.02** | | Hệ thống lưu lịch sử và thông tin của chuyến đi. |
+| **FR-08.01** | **BR-08 Theo dõi vị trí và ETA** | Hệ thống ghi nhận và cập nhật vị trí tài xế trong quá trình hoạt động. |
+| **FR-08.02** | | Hệ thống sử dụng vị trí để hỗ trợ phân công tài xế và cung cấp ETA cho khách hàng. |
+| **FR-09.01** | **BR-09 Tính cước** | Hệ thống xác định loại dịch vụ và thông tin cần thiết để tính cước. |
+| **FR-09.02** | | Hệ thống tính và lưu số tiền khách hàng phải trả theo quy tắc cước. |
+| **FR-10.01** | **BR-10 Thanh toán** | Hệ thống hỗ trợ thanh toán bằng tiền mặt và thanh toán điện tử. |
+| **FR-10.02** | | Hệ thống gửi và nhận kết quả giao dịch thông qua nhà cung cấp thanh toán bên ngoài. |
+| **FR-11.01** | **BR-11 Xử lý kết quả thanh toán** | Hệ thống ghi nhận trạng thái và thông báo kết quả giao dịch cho khách hàng. |
+| **FR-11.02** | | Hệ thống hỗ trợ thực hiện lại giao dịch thất bại theo chính sách doanh nghiệp. |
+| **FR-12.01** | **BR-12 Quản lý thông báo** | Hệ thống gửi thông báo cho khách hàng và tài xế về các sự kiện quan trọng của chuyến đi. |
+| **FR-12.02** | | Hệ thống thông báo kết quả thanh toán và các thay đổi liên quan đến chuyến đi. |
+| **FR-13.01** | **BR-13 Hỗ trợ vận hành** | Hệ thống cho phép nhân viên vận hành theo dõi chuyến đi và trạng thái tài xế. |
+| **FR-13.02** | | Hệ thống hỗ trợ tra cứu thông tin, lịch sử chuyến và giao dịch. |
+| **FR-13.03** | | Hệ thống hỗ trợ xử lý các trường hợp chuyến đi bị lỗi. |
+| **FR-14.01** | **BR-14 Quản lý và tra cứu dữ liệu** | Hệ thống lưu trữ tập trung dữ liệu khách hàng, tài xế, phương tiện, chuyến đi và giao dịch. |
+| **FR-14.02** | | Người dùng có quyền có thể tìm kiếm và tra cứu dữ liệu. |
+| **FR-15.01** | **BR-15 Báo cáo hoạt động** | Hệ thống cung cấp báo cáo về số chuyến, doanh thu, tỷ lệ hoàn thành và tỷ lệ hủy. |
+| **FR-15.02** | | Hệ thống cung cấp thông tin về hiệu quả hoạt động của tài xế. |
+| **FR-16.01** | **BR-16 Đánh giá dịch vụ** | Hệ thống cho phép khách hàng đánh giá tài xế sau khi chuyến đi hoàn thành. |
+| **FR-16.02** | | Hệ thống lưu trữ và hỗ trợ tra cứu kết quả đánh giá. |
+| **FR-17.01** | **BR-17 Bảo mật và phân quyền** | Hệ thống xác thực người dùng và phân quyền truy cập theo vai trò. |
+| **FR-17.02** | | Hệ thống bảo vệ thông tin cá nhân, phương tiện, vị trí và giao dịch. |
+| **FR-17.03** | | Hệ thống ghi nhận các thao tác quan trọng để phục vụ kiểm tra và xử lý sự cố. |
+| **FR-17.04** | | Hệ thống đảm bảo các thành phần hoạt động ổn định và có khả năng mở rộng khi quy mô sử dụng tăng. |
 
 
 ## 7/ Vẽ use case
@@ -758,307 +697,154 @@ class UC15,UC16,UC17,UC18,UC19,UC20 adminUC;
 | **Exception** | **6.1 Giá trị cấu hình không hợp lệ:** Hệ thống phát hiện giá trị không nằm trong phạm vi cho phép → Hiển thị thông báo lỗi → Nhân viên nhập lại giá trị → Quay lại bước 5.<br>**10.1 Không thể lưu cấu hình:** Hệ thống phát hiện lỗi khi lưu → Không áp dụng cấu hình mới → Hiển thị thông báo lỗi → Nhân viên thực hiện lại → Quay lại bước 7. | |
 
 ## 9/ Phân tích quy trình nghiệp vụ (Business Project)
-![Business Project](Business-Project.jpg)
+![Business Project](BusinessProject.jpg)
 
 ```mermaid
-flowchart TB
+flowchart TD
 
 %% =========================================================
-%% KHÁCH HÀNG
+%% GIAO ĐOẠN QUY TRÌNH (STAGES)
 %% =========================================================
-
-subgraph CUSTOMER["KHÁCH HÀNG"]
+subgraph STAGES["PHÂN TÍCH QUY TRÌNH NGHIỆP VỤ (BUSINESS PROJECT) - CAB SYSTEM"]
 direction LR
-
-C_START(["Start"])
-C_LOGIN["Đăng nhập"]
-C_BOOK["Tạo yêu cầu<br/>đặt xe"]
-C_TRACK["Theo dõi chuyến đi"]
-C_PAY["Thanh toán"]
-C_RATE["Đánh giá<br/>tài xế"]
-C_END(["End"])
-
-C_START --> C_LOGIN
-C_LOGIN --> C_BOOK
-C_TRACK --> C_PAY
-C_PAY --> C_RATE
-C_RATE --> C_END
-
+    ST1["1. ĐẶT XE"]
+    ST2["2. TÌM VÀ PHÂN CÔNG TÀI XẾ"]
+    ST3["3. THỰC HIỆN CHUYẾN ĐI"]
+    ST4["4. THANH TOÁN"]
+    ST5["5. HOÀN THÀNH & ĐÁNH GIÁ"]
+    ST1 ---> ST2 ---> ST3 ---> ST4 ---> ST5
 end
 
-
 %% =========================================================
-%% HỆ THỐNG CAB
+%% SWIMLANES (LÀN TÁC NHÂN)
 %% =========================================================
 
-subgraph SYSTEM["HỆ THỐNG CAB"]
-direction LR
-
-SYS_RECEIVE["Tiếp nhận<br/>yêu cầu"]
-SYS_FIND["Tìm tài xế<br/>phù hợp"]
-SYS_SEND["Gửi yêu cầu<br/>chuyến"]
-SYS_ASSIGN["Gán tài xế<br/>cho chuyến"]
-SYS_TRACK["Theo dõi trạng thái<br/>chuyến"]
-SYS_FARE["Tính cước<br/>chuyến đi"]
-SYS_SAVE["Lưu trạng thái<br/>thanh toán"]
-SYS_RESULT["Gửi kết quả<br/>thanh toán"]
-
-SYS_RECEIVE --> SYS_FIND
-SYS_FIND --> SYS_SEND
-SYS_SEND --> SYS_ASSIGN
-SYS_ASSIGN --> SYS_TRACK
-SYS_TRACK --> SYS_FARE
-SYS_FARE --> SYS_SAVE
-SYS_SAVE --> SYS_RESULT
-
+%% 1. KHÁCH HÀNG
+subgraph LANE_CUSTOMER["👤 KHÁCH HÀNG"]
+    direction LR
+    N1_1["1.1 Đăng ký/Đăng nhập"]
+    N1_2["1.2 Nhập thông tin đặt xe<br/>(điểm đón, điểm đến, loại xe)"]
+    N1_3["1.3 Xem tài xế được gợi ý<br/>và thời gian dự kiến"]
+    N1_4["1.4 Hủy chuyến<br/>(nếu cần)"]
+    N1_5["1.5 Theo dõi vị trí tài xế<br/>và trạng thái chuyến"]
+    N1_10["1.10 Thanh toán chuyến đi"]
+    N1_11["1.11 Xem lịch sử chuyến"]
+    N1_12["1.12 Đánh giá tài xế"]
 end
 
-
-%% =========================================================
-%% TÀI XẾ
-%% =========================================================
-
-subgraph DRIVER["TÀI XẾ"]
-direction LR
-
-D_NOTIFY["Nhận thông báo<br/>chuyến mới"]
-D_VIEW["Xem thông tin<br/>chuyến"]
-D_ACCEPT{"Chấp nhận<br/>chuyến?"}
-D_MOVE["Di chuyển đến<br/>điểm đón"]
-D_ARRIVE["Đến điểm đón"]
-D_PICKUP["Đón khách"]
-D_TRIP["Thực hiện<br/>chuyến đi"]
-D_COMPLETE["Hoàn thành<br/>chuyến"]
-
-D_NOTIFY --> D_VIEW
-D_VIEW --> D_ACCEPT
-D_ACCEPT -->|Yes| D_MOVE
-D_MOVE --> D_ARRIVE
-D_ARRIVE --> D_PICKUP
-D_PICKUP --> D_TRIP
-D_TRIP --> D_COMPLETE
-
+%% 2. TÀI XẾ
+subgraph LANE_DRIVER["🚘 TÀI XẾ"]
+    direction LR
+    N2_1["2.1 Nhận yêu cầu chuyến"]
+    N2_2{"2.2 Chấp nhận chuyến?"}
+    N2_3["2.3 Từ chối chuyến"]
+    N2_4["2.4 Nhận chuyến"]
+    N2_5["2.5 Di chuyển tới điểm đón"]
+    N2_6_1["2.6 Đón khách"]
+    N2_6_2["2.6 Di chuyển tới điểm đến"]
+    N2_7["2.7 Hoàn thành chuyến"]
+    N2_9["2.9 Cập nhật trạng thái<br/>chuyến và vị trí"]
 end
 
-
-%% =========================================================
-%% NHÂN VIÊN VẬN HÀNH
-%% =========================================================
-
-subgraph OPERATION["NHÂN VIÊN VẬN HÀNH"]
-direction LR
-
-O_LOGIN["Đăng nhập hệ thống<br/>vận hành"]
-O_MONITOR_TRIP["Theo dõi các chuyến<br/>đang diễn ra"]
-O_MONITOR_DRIVER["Theo dõi trạng thái<br/>tài xế"]
-O_ERROR["Xử lý các trường hợp<br/>chuyến lỗi"]
-O_SUPPORT["Hỗ trợ khách hàng<br/>(khi cần)"]
-O_REPORT["Báo cáo & thống kê<br/>vận hành"]
-
-O_LOGIN --> O_MONITOR_TRIP
-O_MONITOR_TRIP --> O_MONITOR_DRIVER
-O_MONITOR_DRIVER --> O_ERROR
-O_ERROR --> O_SUPPORT
-O_SUPPORT --> O_REPORT
-
+%% 3. NHÂN VIÊN VẬN HÀNH
+subgraph LANE_OPERATOR["🎧 NHÂN VIÊN VẬN HÀNH"]
+    direction LR
+    N3_1["3.1 Hỗ trợ tìm tài xế<br/>khi hệ thống không tìm được"]
+    N3_2["3.2 Theo dõi chuyến đi,<br/>trạng thái tài xế"]
+    N3_3["3.3 Xử lý sự cố, hỗ trợ<br/>khách hàng/tài xế"]
+    N3_4["3.4 Tra cứu giao dịch,<br/>kiểm tra thanh toán"]
 end
 
-
-%% =========================================================
-%% NHÀ CUNG CẤP THANH TOÁN
-%% =========================================================
-
-subgraph PAYMENT["NHÀ CUNG CẤP THANH TOÁN"]
-direction LR
-
-PAY_RECEIVE["Tiếp nhận yêu cầu<br/>thanh toán"]
-PAY_PROCESS["Xử lý giao dịch<br/>thanh toán"]
-PAY_RESULT["Trả kết quả<br/>giao dịch"]
-
-PAY_RECEIVE --> PAY_PROCESS
-PAY_PROCESS --> PAY_RESULT
-
+%% 4. BAN GIÁM ĐỐC
+subgraph LANE_BOARD["📊 BAN GIÁM ĐỐC"]
+    direction LR
+    N4_1["4.1 Xem báo cáo hoạt động<br/>(doanh thu, số chuyến, tỷ lệ hoàn thành, hủy...)"]
 end
 
-
 %% =========================================================
-%% NHÀ CUNG CẤP THÔNG BÁO
-%% =========================================================
-
-subgraph NOTIFICATION["NHÀ CUNG CẤP THÔNG BÁO"]
-direction LR
-
-NOTI_RECEIVE["Tiếp nhận yêu cầu<br/>gửi thông báo"]
-NOTI_SEND["Gửi thông báo đến<br/>khách hàng / tài xế"]
-NOTI_RESULT["Trả kết quả gửi<br/>thông báo"]
-
-NOTI_RECEIVE --> NOTI_SEND
-NOTI_SEND --> NOTI_RESULT
-
-end
-
-
-%% =========================================================
-%% KHÁCH HÀNG → HỆ THỐNG
+%% LUỒNG NGHIỆP VỤ & LIÊN KẾT (FLOWS & CONNECTIONS)
 %% =========================================================
 
-C_BOOK --> SYS_RECEIVE
+%% Làn Khách hàng
+N1_1 --> N1_2
+N1_2 -.-> N2_1
+N1_3 -.-> N1_4
+N1_10 --> N1_11
+N1_10 --> N1_12
 
+%% Làn Tài xế
+N2_1 --> N2_2
+N2_2 -- "Không" --> N2_3
+N2_2 -- "Có" --> N2_4
+N2_3 -.-> N3_1
+N2_4 -.-> N1_3
+N2_4 --> N2_5
+N2_5 --> N2_6_1
+N2_6_1 --> N2_6_2
+N2_6_2 --> N2_7
 
-%% =========================================================
-%% HỆ THỐNG → TÀI XẾ
-%% =========================================================
+%% Cập nhật vị trí & trạng thái
+N2_5 -.-> N2_9
+N2_6_1 -.-> N2_9
+N2_6_2 -.-> N2_9
+N2_9 -.-> N1_5
 
-SYS_SEND --> D_NOTIFY
+%% Làn Nhân viên Vận hành
+N3_1 -.-> N1_3
+N3_2 --> N3_3
+N2_9 -.-> N3_2
+N2_7 -.-> N3_4
+N1_10 -.-> N3_4
 
+%% Làn Ban Giám đốc
+N2_7 -.-> N4_1
+N1_12 -.-> N4_1
 
-%% =========================================================
-%% TÀI XẾ TỪ CHỐI / KHÔNG PHẢN HỒI
-%% =========================================================
-
-D_ACCEPT -->|No| D_NOTIFY
-
-D_ACCEPT -. "Từ chối / không phản hồi" .-> SYS_FIND
-
-
-%% =========================================================
-%% TÀI XẾ → HỆ THỐNG
-%% =========================================================
-
-D_ACCEPT -->|Yes| SYS_ASSIGN
-
-D_COMPLETE --> SYS_TRACK
-
-
-%% =========================================================
-%% HỆ THỐNG → KHÁCH HÀNG
-%% =========================================================
-
-SYS_TRACK --> C_TRACK
-SYS_RESULT --> C_PAY
-
-
-%% =========================================================
-%% QUẢN LÝ / GIÁM SÁT VẬN HÀNH
-%% =========================================================
-
-SYS_TRACK -.-> O_MONITOR_TRIP
-D_COMPLETE -.-> O_MONITOR_TRIP
-D_NOTIFY -.-> O_MONITOR_DRIVER
-
+%% Chuyển giao qua Thanh toán
+N2_7 -.-> N1_10
 
 %% =========================================================
-%% HOÀN THÀNH CHUYẾN → TÍNH CƯỚC
+%% STYLES & COLORS
 %% =========================================================
+classDef stageStyle fill:#f1f3f4,stroke:#5f6368,stroke-width:1px,color:#202124,font-weight:bold;
+classDef custStyle fill:#e8f0fe,stroke:#4285f4,stroke-width:1.5px,color:#174ea6;
+classDef drivStyle fill:#e6f4ea,stroke:#34a853,stroke-width:1.5px,color:#0d652d;
+classDef operStyle fill:#f3e8fd,stroke:#9333ea,stroke-width:1.5px,color:#581c87;
+classDef boardStyle fill:#fef7e0,stroke:#fbbc04,stroke-width:1.5px,color:#b06000;
 
-D_COMPLETE --> SYS_FARE
-
-
-%% =========================================================
-%% THANH TOÁN
-%% =========================================================
-
-SYS_FARE --> PAY_RECEIVE
-PAY_RESULT --> SYS_SAVE
-SYS_SAVE --> SYS_RESULT
-
-
-%% =========================================================
-%% THÔNG BÁO
-%% =========================================================
-
-SYS_RESULT --> NOTI_RECEIVE
-NOTI_RESULT -.-> C_TRACK
-NOTI_RESULT -.-> D_NOTIFY
-
-
-%% =========================================================
-%% BÁO CÁO VẬN HÀNH
-%% =========================================================
-
-O_REPORT -.-> SYS_TRACK
-O_REPORT -.-> PAY_RESULT
-
-
-%% =========================================================
-%% STYLE
-%% =========================================================
-
-classDef customer fill:#eaf3ff,stroke:#3973c9,stroke-width:1.5px,color:#123456;
-
-classDef system fill:#e8f7f8,stroke:#4da6a6,stroke-width:1.5px,color:#123456;
-
-classDef driver fill:#eef7df,stroke:#8bb65a,stroke-width:1.5px,color:#234512;
-
-classDef operation fill:#fff0dc,stroke:#e4a24c,stroke-width:1.5px,color:#5a3710;
-
-classDef payment fill:#f1e8ff,stroke:#9270bd,stroke-width:1.5px,color:#3b2757;
-
-classDef notification fill:#fff4d9,stroke:#d7a52b,stroke-width:1.5px,color:#5a4510;
-
-classDef startend fill:#8e78d4,stroke:#6652a8,stroke-width:2px,color:white;
-
-classDef decision fill:#ffe3a8,stroke:#d69b27,stroke-width:2px,color:#5a4010;
-
-
-class C_START,C_END startend;
-
-class C_LOGIN,C_BOOK,C_TRACK,C_PAY,C_RATE customer;
-
-class SYS_RECEIVE,SYS_FIND,SYS_SEND,SYS_ASSIGN,SYS_TRACK,SYS_FARE,SYS_SAVE,SYS_RESULT system;
-
-class D_NOTIFY,D_VIEW,D_MOVE,D_ARRIVE,D_PICKUP,D_TRIP,D_COMPLETE driver;
-
-class D_ACCEPT decision;
-
-class O_LOGIN,O_MONITOR_TRIP,O_MONITOR_DRIVER,O_ERROR,O_SUPPORT,O_REPORT operation;
-
-class PAY_RECEIVE,PAY_PROCESS,PAY_RESULT payment;
-
-class NOTI_RECEIVE,NOTI_SEND,NOTI_RESULT notification;
+class ST1,ST2,ST3,ST4,ST5 stageStyle;
+class N1_1,N1_2,N1_3,N1_4,N1_5,N1_10,N1_11,N1_12 custStyle;
+class N2_1,N2_2,N2_3,N2_4,N2_5,N2_6_1,N2_6_2,N2_7,N2_9 drivStyle;
+class N3_1,N3_2,N3_3,N3_4 operStyle;
+class N4_1 boardStyle;
 ```
 
 
 ## 10/ Phân tích quy tắc nghiệp vụ (Business Rules)
 | ID | Business Rule | Mô tả |
 |---|---|---|
-| **BUS-R01** | Khách hàng phải đăng nhập trước khi đặt xe | Chỉ khách hàng đã xác thực tài khoản mới được phép tạo yêu cầu đặt xe. |
-| **BUS-R02** | Thông tin đặt xe bắt buộc | Một yêu cầu đặt xe phải có tối thiểu điểm đón, điểm đến và loại xe/dịch vụ. |
-| **BUS-R03** | Yêu cầu đặt xe có trạng thái | Mỗi yêu cầu/chuyến đi phải có trạng thái để phản ánh quá trình xử lý, ví dụ: Đang tìm tài xế, Đã nhận tài xế, Đang thực hiện, Hoàn thành, Đã hủy. |
-| **BUS-R04** | Tài xế phải ở trạng thái phù hợp mới được nhận chuyến | Chỉ tài xế có trạng thái **sẵn sàng nhận chuyến** mới được hệ thống đưa vào danh sách tìm tài xế. |
-| **BUS-R05** | Tài xế phải có phương tiện hợp lệ | Tài xế phải được gắn với phương tiện phù hợp với loại dịch vụ/chuyến xe trước khi được phân công. |
-| **BUS-R06** | Tìm tài xế dựa trên vị trí | Hệ thống ưu tiên xem xét các tài xế có vị trí phù hợp/gần điểm đón của khách hàng. |
-| **BUS-R07** | Tài xế được ưu tiên theo tiêu chí vận hành | Hệ thống phải áp dụng các tiêu chí ưu tiên tài xế do doanh nghiệp quy định. **Cần xác nhận tiêu chí cụ thể.** |
-| **BUS-R08** | Tài xế phải phản hồi yêu cầu chuyến | Tài xế phải chấp nhận hoặc từ chối yêu cầu trong khoảng thời gian được doanh nghiệp quy định. **Thời gian phản hồi cần xác nhận.** |
-| **BUS-R09** | Tài xế từ chối thì tiếp tục tìm tài xế | Khi tài xế từ chối chuyến, hệ thống phải chuyển sang tìm tài xế phù hợp khác mà không yêu cầu khách hàng tạo lại yêu cầu. |
-| **BUS-R10** | Tài xế không phản hồi thì tiếp tục tìm tài xế | Nếu tài xế không phản hồi trong thời gian quy định, hệ thống phải xem yêu cầu đó là không được chấp nhận và tiếp tục tìm tài xế khác. |
-| **BUS-R11** | Không tìm được tài xế phải thông báo khách hàng | Khi hệ thống đã thực hiện cơ chế tìm tài xế nhưng không tìm được tài xế phù hợp, khách hàng phải nhận được thông báo rõ ràng. |
-| **BUS-R12** | Một chuyến chỉ được gán cho một tài xế | Tại một thời điểm, một chuyến chỉ có một tài xế được hệ thống xác nhận nhận chuyến. |
-| **BUS-R13** | Trạng thái chuyến phải tuân theo trình tự nghiệp vụ | Chuyến đi phải được cập nhật theo trình tự hợp lệ, ví dụ: Đã nhận → Đã đến điểm đón → Đã đón khách → Đang di chuyển → Hoàn thành. |
-| **BUS-R14** | Chỉ tài xế được phân công mới được cập nhật chuyến | Tài xế không được phân công cho chuyến không được phép thay đổi trạng thái của chuyến đó. |
-| **BUS-R15** | Vị trí tài xế được sử dụng trong quá trình vận hành | Hệ thống sử dụng vị trí tài xế để hỗ trợ tìm tài xế và cung cấp thông tin vị trí/thời gian dự kiến đến cho khách hàng. |
-| **BUS-R16** | Chỉ sử dụng vị trí mới nhất khả dụng | Khi cung cấp thông tin vị trí, hệ thống ưu tiên sử dụng dữ liệu vị trí mới nhất mà hệ thống nhận được. |
-| **BUS-R17** | Chuyến hoàn thành mới được xác định cước cuối cùng | Hệ thống thực hiện xác định số tiền phải trả dựa trên thông tin chuyến sau khi chuyến hoàn thành. |
-| **BUS-R18** | Cước phụ thuộc loại dịch vụ và thông tin chuyến | Số tiền phải trả được xác định dựa trên loại dịch vụ và các thông tin liên quan của chuyến theo chính sách tính cước. **Công thức cụ thể cần xác nhận.** |
-| **BUS-R19** | Chỉ hỗ trợ phương thức thanh toán được cấu hình | Khách hàng chỉ có thể sử dụng các phương thức thanh toán mà doanh nghiệp đã cấu hình và cho phép trên hệ thống. |
-| **BUS-R20** | Không lưu thông tin nhạy cảm của phương thức thanh toán | Thông tin nhạy cảm của thẻ/tài khoản thanh toán không được lưu trực tiếp trong hệ thống CAB; giao dịch điện tử được xử lý thông qua nhà cung cấp thanh toán bên ngoài. |
-| **BUS-R21** | Thanh toán phải có trạng thái | Mỗi giao dịch thanh toán phải có trạng thái để xác định kết quả xử lý, ví dụ: Chờ xử lý, Thành công, Thất bại. |
-| **BUS-R22** | Thanh toán thất bại phải thông báo khách hàng | Khi giao dịch điện tử thất bại, hệ thống phải thông báo kết quả cho khách hàng. |
-| **BUS-R23** | Thanh toán thất bại được xử lý lại theo chính sách | Khách hàng có thể thực hiện lại giao dịch thanh toán thất bại theo chính sách của doanh nghiệp. **Số lần/thời gian retry cần xác nhận.** |
-| **BUS-R24** | Gửi thông báo khi có sự kiện quan trọng | Hệ thống phải gửi thông báo khi yêu cầu được tiếp nhận, tài xế nhận chuyến, tài xế đến điểm đón, chuyến hoàn thành và thanh toán có kết quả. |
-| **BUS-R25** | Thông báo không được làm gián đoạn nghiệp vụ đặt xe | Nếu dịch vụ thông báo gặp lỗi, hệ thống đặt xe và xử lý chuyến vẫn phải tiếp tục hoạt động. |
-| **BUS-R26** | Nhân viên vận hành chỉ truy cập chức năng được cấp quyền | Nhân viên vận hành chỉ được sử dụng các chức năng và dữ liệu phù hợp với quyền được cấp. |
-| **BUS-R27** | Thao tác quản trị nhạy cảm phải được phân quyền | Các thao tác có tính nhạy cảm phải yêu cầu quyền phù hợp và không được cho phép nhân viên thông thường thực hiện nếu không có quyền. |
-| **BUS-R28** | Dữ liệu quan trọng phải được bảo vệ | Thông tin cá nhân, thông tin phương tiện, dữ liệu vị trí và dữ liệu giao dịch phải được bảo vệ khỏi truy cập trái phép. |
-| **BUS-R29** | Thao tác quan trọng phải được lưu vết | Các thao tác quan trọng của người dùng và nhân viên quản trị phải được ghi nhận để phục vụ kiểm tra và xử lý sự cố. |
-| **BUS-R30** | Chuyến đã hoàn thành cho phép khách hàng đánh giá | Khách hàng chỉ được đánh giá tài xế sau khi chuyến đi đã hoàn thành. |
-| **BUS-R31** | Mỗi chuyến chỉ có một kết quả đánh giá của khách hàng | Một khách hàng không được tạo nhiều đánh giá cho cùng một chuyến, trừ khi doanh nghiệp có chính sách cho phép chỉnh sửa/đánh giá lại. |
-| **BUS-R32** | Dữ liệu báo cáo phải dựa trên dữ liệu nghiệp vụ | Các báo cáo về số chuyến, doanh thu, tỷ lệ hoàn thành, tỷ lệ hủy và hiệu quả tài xế phải được tổng hợp từ dữ liệu chuyến và giao dịch thực tế. |
-| **BUS-R33** | Chuyến bị hủy phải được ghi nhận | Khi chuyến bị hủy, hệ thống phải lưu trạng thái và thông tin liên quan đến việc hủy để phục vụ tra cứu và báo cáo. |
-| **BUS-R34** | Dữ liệu nghiệp vụ phải được tập trung | Thông tin khách hàng, tài xế, phương tiện, chuyến đi và giao dịch phải được quản lý tập trung để hỗ trợ tra cứu và vận hành. |
-| **BUS-R35** | Lỗi một thành phần không làm dừng toàn hệ thống | Khi một thành phần như thanh toán hoặc thông báo gặp lỗi, các chức năng cốt lõi khác của hệ thống vẫn phải tiếp tục hoạt động trong phạm vi cho phép. |
-| **BUS-R36** | Hệ thống phải hỗ trợ mở rộng độc lập | Các thành phần có tải tăng cao phải có khả năng mở rộng mà hạn chế ảnh hưởng đến các thành phần khác. |
-| **BUS-R37** | Chức năng mới không được ảnh hưởng nghiêm trọng đến chức năng đang hoạt động | Khi triển khai chức năng mới, hệ thống phải hạn chế ảnh hưởng đến các chức năng hiện có. |
-| **BUS-R38** | Dịch vụ mới phải sử dụng cơ chế nghiệp vụ mở rộng | Khi bổ sung loại dịch vụ mới, hệ thống phải cho phép cấu hình/bổ sung dịch vụ mà không phải xây dựng lại toàn bộ hệ thống. |
-| **BUS-R39** | Phương thức thanh toán mới có thể được bổ sung | Hệ thống phải cho phép tích hợp thêm phương thức hoặc nhà cung cấp thanh toán trong tương lai mà hạn chế thay đổi các chức năng cốt lõi. |
-| **BUS-R40** | Nhà cung cấp thông báo có thể thay đổi | Hệ thống phải cho phép bổ sung hoặc thay đổi nhà cung cấp/kênh thông báo mà không phải thay đổi toàn bộ hệ thống. |
+| **BUS-R01** | Đăng nhập trước khi sử dụng chức năng | Người dùng phải đăng nhập và được xác thực trước khi sử dụng các chức năng yêu cầu tài khoản. |
+| **BUS-R02** | Thông tin đặt xe bắt buộc | Yêu cầu đặt xe phải có tối thiểu **điểm đón, điểm đến và loại xe/dịch vụ**. |
+| **BUS-R03** | Chuyến đi phải có trạng thái | Mỗi chuyến đi phải có trạng thái để phản ánh quá trình xử lý, như: Đang tìm tài xế, Đã nhận, Đang thực hiện, Hoàn thành, Đã hủy. |
+| **BUS-R04** | Chỉ tài xế phù hợp mới được nhận chuyến | Tài xế phải đang **sẵn sàng nhận chuyến**, có phương tiện hợp lệ và phù hợp với loại dịch vụ được yêu cầu. |
+| **BUS-R05** | Ưu tiên tài xế phù hợp và gần điểm đón | Hệ thống ưu tiên tài xế dựa trên vị trí và các tiêu chí vận hành do doanh nghiệp quy định. |
+| **BUS-R06** | Tài xế phải phản hồi yêu cầu chuyến | Tài xế phải chấp nhận hoặc từ chối yêu cầu trong thời gian quy định. |
+| **BUS-R07** | Từ chối hoặc không phản hồi thì tìm tài xế khác | Khi tài xế từ chối hoặc không phản hồi, hệ thống tiếp tục tìm tài xế phù hợp khác mà không yêu cầu khách hàng đặt lại chuyến. |
+| **BUS-R08** | Không tìm được tài xế phải thông báo | Nếu không tìm được tài xế phù hợp, hệ thống phải thông báo rõ ràng cho khách hàng. |
+| **BUS-R09** | Một chuyến chỉ được phân công cho một tài xế | Tại một thời điểm, một chuyến chỉ được xác nhận cho một tài xế. |
+| **BUS-R10** | Trạng thái chuyến phải tuân theo trình tự | Chuyến đi phải được cập nhật theo trình tự nghiệp vụ hợp lệ: **Đã nhận → Đã đến điểm đón → Đã đón khách → Đang di chuyển → Hoàn thành**. |
+| **BUS-R11** | Chỉ tài xế được phân công mới được cập nhật chuyến | Chỉ tài xế được hệ thống phân công mới có quyền cập nhật trạng thái của chuyến tương ứng. |
+| **BUS-R12** | Sử dụng vị trí tài xế trong quá trình vận hành | Hệ thống sử dụng vị trí mới nhất của tài xế để hỗ trợ phân công, theo dõi chuyến và cung cấp thời gian dự kiến đến cho khách hàng. |
+| **BUS-R13** | Chuyến hoàn thành mới xác định cước cuối cùng | Cước cuối cùng được xác định dựa trên thông tin thực tế của chuyến sau khi chuyến hoàn thành. |
+| **BUS-R14** | Cước phụ thuộc vào loại dịch vụ và thông tin chuyến | Số tiền phải trả được tính dựa trên loại dịch vụ và các thông tin liên quan của chuyến theo chính sách giá của doanh nghiệp. |
+| **BUS-R15** | Chỉ sử dụng phương thức thanh toán được hỗ trợ | Khách hàng chỉ được sử dụng các phương thức thanh toán đã được doanh nghiệp cấu hình và cho phép. |
+| **BUS-R16** | Không lưu thông tin thanh toán nhạy cảm | CAB không lưu trực tiếp thông tin nhạy cảm của thẻ/tài khoản; thanh toán điện tử được xử lý thông qua nhà cung cấp thanh toán bên ngoài. |
+| **BUS-R17** | Giao dịch thanh toán phải có trạng thái | Mỗi giao dịch phải được ghi nhận trạng thái như: **Chờ xử lý, Thành công, Thất bại**. |
+| **BUS-R18** | Thanh toán thất bại phải được thông báo | Khi thanh toán điện tử thất bại, hệ thống phải thông báo cho khách hàng và cho phép thực hiện lại theo chính sách. |
+| **BUS-R19** | Gửi thông báo khi có sự kiện quan trọng | Hệ thống phải thông báo các sự kiện quan trọng như tài xế nhận chuyến, tài xế đến điểm đón, chuyến hoàn thành và kết quả thanh toán. |
+| **BUS-R20** | Lỗi dịch vụ thông báo không làm dừng nghiệp vụ chính | Khi dịch vụ thông báo gặp lỗi, các chức năng cốt lõi như đặt xe và xử lý chuyến vẫn phải tiếp tục hoạt động trong phạm vi cho phép. |
+| **BUS-R21** | Truy cập chức năng theo quyền | Người dùng và nhân viên vận hành chỉ được truy cập các chức năng và dữ liệu phù hợp với quyền được cấp. |
+| **BUS-R22** | Dữ liệu và thao tác quan trọng phải được bảo vệ, lưu vết | Thông tin cá nhân, phương tiện, vị trí và giao dịch phải được bảo vệ; các thao tác quan trọng phải được ghi nhận để phục vụ kiểm tra và xử lý sự cố. |
+| **BUS-R23** | Chỉ đánh giá sau khi chuyến hoàn thành | Khách hàng chỉ được đánh giá tài xế đối với chuyến đã hoàn thành và mỗi chuyến chỉ có một đánh giá của khách hàng. |
+| **BUS-R24** | Dữ liệu báo cáo phải dựa trên dữ liệu thực tế | Báo cáo về số chuyến, doanh thu, tỷ lệ hoàn thành, tỷ lệ hủy và hiệu quả tài xế phải được tổng hợp từ dữ liệu chuyến và giao dịch thực tế. |
+| **BUS-R25** | Dữ liệu và dịch vụ phải có khả năng mở rộng | Hệ thống phải hỗ trợ mở rộng dịch vụ, phương thức thanh toán và nhà cung cấp thông báo trong tương lai mà hạn chế ảnh hưởng đến các chức năng cốt lõi. |
