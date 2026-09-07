@@ -1,0 +1,172 @@
+openapi: 3.0.0
+
+info:
+  title: CAB System - Fare Calculation API
+  description: API xác định thông tin và tính cước chuyến đi
+  version: 1.0.0
+
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/abc-c9a/aaaaa/1.0.0
+  - url: http://localhost:8080/api/v1
+
+tags:
+  - name: Fare Calculation
+    description: Quản lý và tính cước chuyến đi
+
+paths:
+
+  /trips/{tripId}/fare:
+    post:
+      tags:
+        - Fare Calculation
+      summary: Tính cước chuyến đi
+      description: Xác định loại dịch vụ, sử dụng thông tin chuyến đi và tính số tiền khách hàng phải trả.
+      parameters:
+        - name: tripId
+          in: path
+          required: true
+          schema:
+            type: string
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CalculateFareRequest'
+
+      responses:
+        '200':
+          description: Tính cước thành công
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Fare'
+
+        '400':
+          description: Thông tin tính cước không hợp lệ
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+        '404':
+          description: Không tìm thấy chuyến đi
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+        '409':
+          description: Chuyến đi chưa đủ điều kiện tính cước
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+        '500':
+          description: Lỗi hệ thống
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+
+  /trips/{tripId}/fare:
+    get:
+      tags:
+        - Fare Calculation
+      summary: Xem thông tin cước
+      description: Tra cứu số tiền và thông tin cước đã được tính cho chuyến đi.
+      parameters:
+        - name: tripId
+          in: path
+          required: true
+          schema:
+            type: string
+
+      responses:
+        '200':
+          description: Thông tin cước
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Fare'
+
+        '404':
+          description: Không tìm thấy thông tin cước
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+        '500':
+          description: Lỗi hệ thống
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+
+components:
+
+  schemas:
+
+    CalculateFareRequest:
+      type: object
+      required:
+        - serviceType
+        - distance
+        - duration
+      properties:
+        serviceType:
+          type: string
+          enum:
+            - CAR_4_SEATS
+            - CAR_7_SEATS
+          description: Loại dịch vụ/phương tiện
+        distance:
+          type: number
+          format: double
+          description: Quãng đường chuyến đi tính bằng km
+        duration:
+          type: integer
+          description: Thời gian chuyến đi tính bằng phút
+
+    Fare:
+      type: object
+      properties:
+        id:
+          type: string
+        tripId:
+          type: string
+        serviceType:
+          type: string
+          enum:
+            - CAR_4_SEATS
+            - CAR_7_SEATS
+        distance:
+          type: number
+          format: double
+        duration:
+          type: integer
+        amount:
+          type: number
+          format: double
+          description: Số tiền khách hàng phải trả
+        currency:
+          type: string
+          example: VND
+        calculatedAt:
+          type: string
+          format: date-time
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
