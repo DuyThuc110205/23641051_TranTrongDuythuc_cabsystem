@@ -1,7 +1,7 @@
 openapi: 3.0.0
 
 info:
-  title: CAB System - Booking API
+  title: Driver Matching API
   description: |
     API quản lý yêu cầu đặt xe và chuyến đi của khách hàng.
     
