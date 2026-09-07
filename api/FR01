@@ -1,0 +1,258 @@
+openapi: 3.0.0
+
+info:
+  title: CAB System - Booking API
+  description: |
+    API quản lý yêu cầu đặt xe và chuyến đi của khách hàng.
+    
+    Chức năng hỗ trợ:
+    - Khách hàng tạo yêu cầu đặt xe
+    - Khách hàng theo dõi trạng thái yêu cầu/chuyến đi
+    - Khách hàng hủy yêu cầu/chuyến đi theo chính sách
+  version: 1.0.0
+
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/abc-c9a/abc/1.0.0
+  - url: http://localhost:8080/api/v1
+    description: Local server
+
+paths:
+
+  /bookings:
+    post:
+      summary: Create a new booking
+      description: Khách hàng tạo yêu cầu đặt xe mới.
+      operationId: createBooking
+      tags:
+        - Bookings
+
+      requestBody:
+        description: Thông tin yêu cầu đặt xe
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateBookingRequest'
+
+      responses:
+        '201':
+          description: Booking created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Booking'
+
+        '400':
+          description: Invalid booking information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+
+  /bookings/{bookingId}:
+    get:
+      summary: Get booking details
+      description: Khách hàng xem thông tin và trạng thái của yêu cầu/chuyến đi.
+      operationId: getBookingById
+      tags:
+        - Bookings
+
+      parameters:
+        - name: bookingId
+          in: path
+          required: true
+          description: ID của yêu cầu đặt xe
+          schema:
+            type: integer
+            format: int64
+
+      responses:
+        '200':
+          description: Booking found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Booking'
+
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+        '404':
+          description: Booking not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+
+    delete:
+      summary: Cancel a booking
+      description: Khách hàng hủy yêu cầu/chuyến đi theo chính sách hủy của doanh nghiệp.
+      operationId: cancelBooking
+      tags:
+        - Bookings
+
+      parameters:
+        - name: bookingId
+          in: path
+          required: true
+          description: ID của yêu cầu đặt xe cần hủy
+          schema:
+            type: integer
+            format: int64
+
+      responses:
+        '200':
+          description: Booking cancelled successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Booking'
+
+        '400':
+          description: Booking cannot be cancelled according to policy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+        '404':
+          description: Booking not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+
+components:
+
+  schemas:
+
+    CreateBookingRequest:
+      type: object
+      properties:
+        pickupLocation:
+          type: string
+          description: Địa điểm đón khách
+          example: 12 Nguyễn Huệ, Quận 1, TP.HCM
+
+        destination:
+          type: string
+          description: Địa điểm đến
+          example: Sân bay Tân Sơn Nhất
+
+        vehicleType:
+          type: string
+          description: Loại xe khách hàng lựa chọn
+          enum:
+            - CAR_4_SEATS
+            - CAR_7_SEATS
+          example: CAR_4_SEATS
+
+      required:
+        - pickupLocation
+        - destination
+        - vehicleType
+
+
+    Booking:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 10001
+
+        customerId:
+          type: integer
+          format: int64
+          example: 20001
+
+        pickupLocation:
+          type: string
+          example: 12 Nguyễn Huệ, Quận 1, TP.HCM
+
+        destination:
+          type: string
+          example: Sân bay Tân Sơn Nhất
+
+        vehicleType:
+          type: string
+          enum:
+            - CAR_4_SEATS
+            - CAR_7_SEATS
+
+        status:
+          type: string
+          description: Trạng thái yêu cầu/chuyến đi
+          enum:
+            - SEARCHING_DRIVER
+            - DRIVER_ASSIGNED
+            - DRIVER_ARRIVED
+            - IN_PROGRESS
+            - COMPLETED
+            - CANCELLED
+            - NO_DRIVER_FOUND
+
+        createdAt:
+          type: string
+          format: date-time
+
+        cancelledAt:
+          type: string
+          format: date-time
+          nullable: true
+
+
+    Error:
+      type: object
+      properties:
+        error_code:
+          type: string
+          example: BOOKING_NOT_FOUND
+
+        message:
+          type: string
+          example: Booking not found
