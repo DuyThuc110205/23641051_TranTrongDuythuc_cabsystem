@@ -2,32 +2,25 @@
 
 ## 1/ Stakeholder
 ### BẢNG PHÂN TÍCH VÀ XÁC ĐỊNH STAKEHOLDERS (CAB SYSTEM)
-| STT | Nhóm Stakeholder | Vai trò chi tiết | Vai trò & Kỳ vọng chính đối với hệ thống CAB |
-|---:|---|---|---|
-| 1 | **Ban giám đốc / Chủ doanh nghiệp** | Định hướng hoạt động kinh doanh, quyết định mục tiêu và phạm vi hệ thống | Muốn hệ thống vận hành ổn định, phục vụ số lượng lớn khách hàng và tài xế, kiểm soát doanh thu, hiệu quả hoạt động và có khả năng mở rộng |
-| 2 | **Khách hàng** | Người sử dụng dịch vụ để đặt và sử dụng chuyến xe | Đăng ký/đăng nhập, đặt xe nhanh, theo dõi trạng thái chuyến, biết thông tin tài xế, thanh toán, xem lịch sử và đánh giá tài xế |
-| 3 | **Tài xế** | Người nhận và trực tiếp thực hiện chuyến xe | Quản lý hồ sơ và phương tiện, cập nhật trạng thái sẵn sàng, nhận thông báo chuyến, chấp nhận/từ chối chuyến, cập nhật trạng thái và hoàn thành chuyến |
-| 4 | **Nhân viên vận hành** | Theo dõi và điều phối hoạt động đặt xe hằng ngày | Theo dõi chuyến đang diễn ra, trạng thái tài xế, hỗ trợ xử lý chuyến lỗi, quản lý thông tin khách hàng, tài xế, phương tiện và tra cứu lịch sử |
-| 5 | **Bộ phận Tài chính / Kế toán** | Theo dõi các khoản thanh toán, giao dịch và doanh thu từ chuyến xe | Tra cứu giao dịch, theo dõi số tiền phải thu, trạng thái thanh toán và doanh thu; đảm bảo dữ liệu tài chính chính xác |
-| 6 | **Nhà cung cấp thanh toán bên ngoài** | Cung cấp dịch vụ xử lý thanh toán điện tử | Tiếp nhận yêu cầu thanh toán, xử lý giao dịch và trả kết quả cho CAB; không yêu cầu CAB lưu thông tin nhạy cảm của thẻ/tài khoản |
-| 7 | **Nhà cung cấp dịch vụ thông báo** | Cung cấp các kênh gửi thông báo đến khách hàng và tài xế | Gửi thông báo về đặt xe, tài xế, chuyến đi và thanh toán; hỗ trợ khả năng bổ sung hoặc thay đổi kênh thông báo trong tương lai |
-| 8 | **Bộ phận Kinh doanh & Marketing** | Phụ trách hoạt động kinh doanh, thu hút khách hàng và phát triển dịch vụ | Cần dữ liệu về số lượng chuyến, khách hàng và doanh thu để đánh giá hoạt động kinh doanh; kỳ vọng hệ thống hỗ trợ mở rộng dịch vụ và phát triển khách hàng |
-| 9 | **Bộ phận Kỹ thuật / IT** | Quản lý hạ tầng kỹ thuật, vận hành và hỗ trợ hệ thống | Hệ thống ổn định, bảo mật, dễ bảo trì; các thành phần có thể mở rộng độc lập và có thể triển khai tính năng mới từng phần mà hạn chế ảnh hưởng hệ thống đang hoạt động |
+| STT | Stakeholder | Vai trò | Kỳ vọng chính đối với hệ thống CAB |
+|---|---|---|---|
+| 1 | Khách hàng | Người sử dụng dịch vụ đặt xe | Có thể đăng ký, đăng nhập, cập nhật thông tin cá nhân, đặt xe, theo dõi chuyến đi, xem lịch sử chuyến, số tiền phải trả và đánh giá tài xế. |
+| 2 | Tài xế | Người thực hiện chuyến xe | Được tạo tài khoản, cập nhật hồ sơ và thông tin phương tiện, cập nhật trạng thái hoạt động, nhận thông báo chuyến, chấp nhận/từ chối chuyến và cập nhật trạng thái chuyến. |
+| 3 | Nhân viên vận hành | Người quản lý và hỗ trợ hoạt động vận hành | Có giao diện quản trị để quản lý khách hàng, tài xế, phương tiện và chuyến đi; xem chuyến đang diễn ra, kiểm tra trạng thái tài xế, xử lý chuyến bị lỗi và tra cứu lịch sử giao dịch. |
+| 4 | Ban lãnh đạo | Định hướng và theo dõi hoạt động của doanh nghiệp | Có báo cáo về số lượng chuyến, doanh thu, tỷ lệ chuyến hoàn thành, tỷ lệ hủy và hiệu quả hoạt động của tài xế; hệ thống có khả năng phục vụ số lượng lớn khách hàng, tài xế và phát triển lâu dài. |
+| 5 | Nhà cung cấp thanh toán bên ngoài | Cung cấp dịch vụ thanh toán điện tử được tích hợp với CAB | Hỗ trợ xử lý thanh toán điện tử cho khách hàng thông qua hệ thống CAB. |
+| 6 | Nhà cung cấp thông báo | Cung cấp dịch vụ/kênh thông báo được tích hợp với CAB | Hỗ trợ gửi thông báo cho khách hàng và tài xế; có khả năng mở rộng thêm các kênh thông báo trong tương lai. |
 
 ## 2/ Stakeholder Power–Interest Matrix
 ### 2.1/ Phân loại Stakeholder theo Power – Interest
-| Nhóm | Tên nhóm | Stakeholder | Chiến lược quản lý |
+| STT | Stakeholder | Power (High/Low) | Cơ sở xác định Power |
 |---|---|---|---|
-| **1** | **Quản lý chặt chẽ** | **Ban giám đốc / Chủ doanh nghiệp** | Tham gia thường xuyên, xác nhận phạm vi, yêu cầu và các quyết định quan trọng |
-| | | **Nhân viên vận hành** | Làm việc trực tiếp, thu thập yêu cầu và lấy phản hồi thường xuyên |
-| | | **Bộ phận Kỹ thuật / IT** | Phối hợp chặt chẽ về kỹ thuật, bảo mật, hiệu năng và khả năng mở rộng |
-| **2** | **Duy trì sự hài lòng** | **Bộ phận Tài chính / Kế toán** | Đảm bảo các yêu cầu về thanh toán, giao dịch và doanh thu |
-| | | **Bộ phận Kinh doanh & Marketing** | Đảm bảo có dữ liệu cần thiết để theo dõi hoạt động kinh doanh |
-| **3** | **Cập nhật thông tin** | **Khách hàng** | Thu thập nhu cầu, phản hồi và ưu tiên trải nghiệm người dùng |
-| | | **Tài xế** | Khảo sát quy trình thực tế và thu thập phản hồi |
-| | | **Nhà cung cấp thanh toán bên ngoài** | Trao đổi yêu cầu tích hợp, trạng thái giao dịch và xử lý lỗi |
-| | | **Nhà cung cấp dịch vụ thông báo** | Đảm bảo yêu cầu tích hợp và khả năng mở rộng kênh thông báo |
-| **4** | **Theo dõi** | **Chưa xác định** | Chỉ cần theo dõi, không cần tham gia thường xuyên |
+| 1 | Ban lãnh đạo / Ban giám đốc | High | Ban lãnh đạo mong muốn xây dựng nền tảng CAB mới; Ban giám đốc đưa ra kỳ vọng đối với hệ thống. Đề bài cũng nêu doanh nghiệp yêu cầu các đặc tính quan trọng về khả năng mở rộng, ổn định, bảo mật và triển khai hệ thống. Đây là nhóm có ảnh hưởng trực tiếp đến phạm vi và yêu cầu của hệ thống. |
+| 2 | Nhân viên vận hành | Low | Được sử dụng giao diện quản trị để quản lý khách hàng, tài xế, phương tiện, chuyến đi và hỗ trợ xử lý chuyến lỗi. Tuy nhiên, đề bài không nêu nhân viên vận hành có quyền quyết định hoặc phê duyệt phạm vi dự án. Một số thao tác quản trị còn phải được phân quyền, cho thấy quyền hạn của nhân viên có giới hạn. |
+| 3 | Khách hàng | Low | Sử dụng hệ thống để đăng ký, đặt xe, theo dõi chuyến, thanh toán và đánh giá tài xế. Đề bài không nêu khách hàng có quyền quyết định, phê duyệt hoặc kiểm soát nguồn lực của dự án. |
+| 4 | Tài xế | Low | Sử dụng hệ thống để quản lý hồ sơ, phương tiện, trạng thái hoạt động, nhận/từ chối chuyến và cập nhật trạng thái chuyến. Đề bài không nêu tài xế có quyền quyết định, phê duyệt hoặc kiểm soát nguồn lực của dự án. |
+| 5 | Nhà cung cấp thanh toán bên ngoài | Low | Được đề cập là bên cung cấp dịch vụ thanh toán điện tử để CAB tích hợp. Đề bài không nêu bên này có quyền quyết định, phê duyệt hoặc kiểm soát phạm vi và nguồn lực của dự án CAB. |
+| 6 | Nhà cung cấp thông báo | Low | Có vai trò liên quan đến việc cung cấp các kênh thông báo cho hệ thống. Đề bài không nêu bên cung cấp thông báo có quyền quyết định, phê duyệt hoặc kiểm soát phạm vi và nguồn lực của dự án CAB. |
 
 ### 2.2/ Ma trận 2 chiều phân loại Stakeholder theo:
 - **Trục X:** Mức độ quan tâm (Interest)
@@ -35,129 +28,99 @@
 
 ```mermaid
 quadrantChart
-    title Stakeholder Power - Interest Matrix
+    title Stakeholder Power–Interest Matrix — CAB System MVP
+    x-axis "Interest Thấp" --> "Interest Cao"
+    y-axis "Power Thấp" --> "Power Cao"
 
-    x-axis "Quan tâm thấp" --> "Quan tâm cao"
-    y-axis "Ảnh hưởng thấp" --> "Ảnh hưởng cao"
-
-    quadrant-1 "QUẢN LÝ CHẶT CHẼ"
-    quadrant-2 "DUY TRÌ SỰ HÀI LÒNG"
-    quadrant-3 "THEO DÕI"
-    quadrant-4 "CẬP NHẬT THÔNG TIN"
-
-    "Ban Giám đốc / Chủ doanh nghiệp": [0.95, 0.95]
-    "Nhân viên vận hành": [0.85, 0.90]
-    "Bộ phận Kỹ thuật / IT": [0.90, 0.88]
-
-    "Bộ phận Tài chính / Kế toán": [0.50, 0.85]
-    "Bộ phận Kinh doanh & Marketing": [0.55, 0.80]
-
-    "Khách hàng": [0.90, 0.45]
-    "Tài xế": [0.85, 0.40]
-    "NCC thanh toán bên ngoài": [0.65, 0.45]
-    "NCC dịch vụ thông báo": [0.60, 0.40]
-
-    "Chưa xác định": [0.20, 0.20]
+    "Ban lãnh đạo / Ban giám đốc": [0.85, 0.90]
+    "Nhân viên vận hành": [0.85, 0.35]
+    "Khách hàng": [0.90, 0.27]
+    "Tài xế": [0.90, 0.23]
+    "Nhà cung cấp thanh toán bên ngoài": [0.75, 0.20]
+    "Nhà cung cấp thông báo": [0.75, 0.15]
 ```
 
 ## 3/ Business goals
 ### BẢNG XÁC ĐỊNH MỤC TIÊU KINH DOANH (BUSINESS GOALS)
-| STT | Business Goal | Mô tả | Kỳ vọng / Kết quả cần đạt |
-|---:|---|---|---|
-| 1 | **Nâng cao hiệu quả đặt xe** | Thay thế quy trình đặt xe và phân công tài xế thủ công bằng hệ thống CAB | Khách hàng có thể đặt xe nhanh, hệ thống tự động tiếp nhận và xử lý yêu cầu |
-| 2 | **Tự động hóa việc tìm và phân công tài xế** | Tự động tìm tài xế phù hợp dựa trên vị trí, trạng thái sẵn sàng và tiêu chí vận hành | Giảm thời gian điều phối, hạn chế phụ thuộc vào nhân viên vận hành |
-| 3 | **Cải thiện trải nghiệm khách hàng** | Cung cấp thông tin rõ ràng trong toàn bộ quá trình sử dụng dịch vụ | Khách hàng biết trạng thái chuyến, tài xế, thời gian dự kiến đến, chi phí và kết quả thanh toán |
-| 4 | **Nâng cao hiệu quả hoạt động của tài xế** | Hỗ trợ tài xế nhận và xử lý chuyến thông qua hệ thống | Tài xế dễ dàng nhận chuyến, cập nhật trạng thái và hoàn thành chuyến |
-| 5 | **Quản lý tập trung dữ liệu vận hành** | Tập trung thông tin khách hàng, tài xế, phương tiện, chuyến đi và giao dịch | Nhân viên có thể tra cứu và quản lý dữ liệu từ một hệ thống thống nhất |
-| 6 | **Quản lý thanh toán và doanh thu hiệu quả** | Tích hợp thanh toán điện tử và quản lý kết quả thanh toán | Theo dõi được số tiền phải trả, trạng thái giao dịch và doanh thu; không lưu thông tin thanh toán nhạy cảm |
-| 7 | **Giảm tỷ lệ chuyến không được phân công** | Xây dựng cơ chế tiếp tục tìm tài xế khi tài xế được đề xuất không phản hồi hoặc từ chối | Tăng khả năng tìm được tài xế mà khách hàng không phải tạo lại yêu cầu |
-| 8 | **Tăng khả năng kiểm soát hoạt động vận hành** | Cung cấp giao diện để nhân viên theo dõi chuyến và trạng thái tài xế | Nhân viên có thể phát hiện và xử lý nhanh các trường hợp bất thường |
-| 9 | **Cung cấp dữ liệu phục vụ quản lý và ra quyết định** | Tổng hợp các chỉ số hoạt động chính | Ban lãnh đạo có thể theo dõi số chuyến, doanh thu, tỷ lệ hoàn thành, tỷ lệ hủy và hiệu quả tài xế |
-| 10 | **Đảm bảo an toàn và bảo mật dữ liệu** | Bảo vệ thông tin cá nhân, phương tiện, vị trí và giao dịch | Chỉ người có quyền mới được truy cập dữ liệu/chức năng phù hợp; các thao tác quan trọng được lưu vết |
-| 11 | **Đảm bảo hệ thống hoạt động ổn định khi nhu cầu tăng cao** | Thiết kế hệ thống có khả năng mở rộng khi số lượng khách hàng và tài xế tăng | Hạn chế tình trạng hệ thống bị gián đoạn hoặc giảm hiệu năng trong giờ cao điểm |
-| 12 | **Tạo nền tảng có khả năng mở rộng trong tương lai** | Xây dựng CAB không chỉ phục vụ MVP mà còn hỗ trợ phát triển thêm dịch vụ và tích hợp | Có thể bổ sung loại dịch vụ, phương thức thanh toán, kênh thông báo và thay đổi thành phần kỹ thuật mà không phải xây dựng lại toàn bộ hệ thống |
+| Mã | Business Goal | Mô tả | Kết quả cần đạt |
+|---|---|---|---|
+| BG-01 | Xây dựng nền tảng đặt xe phục vụ khách hàng và tài xế | Thay thế những hạn chế của hệ thống hiện tại bằng một nền tảng CAB mới phục vụ quy trình đặt và thực hiện chuyến đi. | Khách hàng và tài xế có thể phối hợp thực hiện chuyến đi trên cùng một nền tảng. |
+| BG-02 | Nâng cao hiệu quả tìm và phân công tài xế | Giảm sự phụ thuộc vào việc phân công tài xế thủ công và hỗ trợ tìm tài xế phù hợp cho chuyến đi. | Việc tìm và phân công tài xế được thực hiện hiệu quả, có xử lý khi tài xế không phản hồi hoặc từ chối. |
+| BG-03 | Quản lý tập trung hoạt động chuyến đi và thanh toán | Khắc phục tình trạng thông tin thanh toán chưa được quản lý tập trung và tăng khả năng theo dõi hoạt động. | Doanh nghiệp có thông tin tập trung về chuyến đi, cước phí và giao dịch thanh toán để theo dõi. |
+| BG-04 | Hỗ trợ vận hành và theo dõi hoạt động kinh doanh | Cung cấp cho các bộ phận trong doanh nghiệp dữ liệu cần thiết để theo dõi và xử lý hoạt động đặt xe. | Nhân viên vận hành có thể theo dõi chuyến đi, tài xế, giao dịch và doanh nghiệp có dữ liệu báo cáo về hoạt động. |
+| BG-05 | Đảm bảo hệ thống hoạt động ổn định khi nhu cầu tăng cao | Đáp ứng nhu cầu phục vụ số lượng lớn khách hàng và tài xế, đồng thời hạn chế ảnh hưởng khi một thành phần gặp lỗi. | Hệ thống duy trì hoạt động ổn định khi tải tăng và lỗi ở một thành phần không làm toàn bộ hệ thống đặt xe ngừng hoạt động. |
+| BG-06 | Tạo nền tảng có khả năng phát triển lâu dài | Xây dựng nền tảng có thể tiếp tục mở rộng và bổ sung các tính năng, dịch vụ trong tương lai. | Các chức năng mới có thể được triển khai từng phần và hệ thống có khả năng mở rộng mà không phải xây dựng lại toàn bộ ứng dụng. |
 
 
 ## 4/ Scope
 ### BẢNG PHẠM VI CÔNG VIỆC THEO MODULE 
-| STT | Module | Phạm vi công việc chính |
-|---:|---|---|
-| 1 | **Quản lý tài khoản & hồ sơ** | Đăng ký, đăng nhập, đăng xuất; cập nhật thông tin khách hàng và tài xế; quản lý trạng thái tài xế |
-| 2 | **Đặt xe (Booking)** | Nhập điểm đón, điểm đến; lựa chọn loại xe; tạo và xác nhận yêu cầu đặt xe |
-| 3 | **Tìm & phân công tài xế (Dispatch)** | Xác định tài xế phù hợp dựa trên vị trí và trạng thái sẵn sàng; gửi yêu cầu chuyến; tài xế chấp nhận hoặc từ chối; tiếp tục tìm tài xế khác khi không có phản hồi hoặc bị từ chối |
-| 4 | **Quản lý & theo dõi chuyến đi** | Quản lý trạng thái chuyến từ khi tạo yêu cầu đến khi hoàn thành hoặc hủy; theo dõi thông tin tài xế, vị trí và thời gian dự kiến đến |
-| 5 | **Quản lý tài xế & phương tiện** | Quản lý hồ sơ tài xế; thông tin phương tiện; trạng thái hoạt động; thông tin vị trí tài xế |
-| 6 | **Tính cước & thanh toán** | Xác định số tiền phải trả; hỗ trợ thanh toán tiền mặt và điện tử; tích hợp nhà cung cấp thanh toán; xử lý và lưu trạng thái giao dịch |
-| 7 | **Thông báo** | Gửi thông báo cho khách hàng và tài xế về đặt xe, nhận chuyến, tài xế đến, trạng thái chuyến và kết quả thanh toán |
-| 8 | **Quản trị & vận hành** | Quản lý khách hàng, tài xế, phương tiện và chuyến đi; theo dõi chuyến đang diễn ra; xử lý chuyến lỗi; tra cứu giao dịch; phân quyền |
-| 9 | **Báo cáo & giám sát** | Cung cấp báo cáo về số lượng chuyến, doanh thu, tỷ lệ hoàn thành, tỷ lệ hủy và hiệu quả hoạt động của tài xế |
-
+| STT | Module | Chức năng chính | Mô tả |
+|---|---|---|---|
+| 1 | Khách hàng | Đặt xe | Khách hàng nhập điểm đón, điểm đến, chọn loại xe và gửi yêu cầu đặt xe. |
+| 2 | Khách hàng | Theo dõi chuyến đi | Khách hàng theo dõi tài xế và trạng thái chuyến đi. |
+| 3 | Tài xế | Tiếp nhận chuyến | Tài xế nhận thông báo, chấp nhận hoặc từ chối chuyến. |
+| 4 | Tài xế | Thực hiện chuyến | Tài xế cập nhật trạng thái trong quá trình thực hiện chuyến. |
+| 5 | Đặt & quản lý chuyến đi | Quản lý chuyến | Quản lý chuyến từ khi khách hàng tạo yêu cầu đến khi hoàn thành. |
+| 6 | Tìm/phân công tài xế | Tìm và phân công tài xế | Xác định tài xế phù hợp dựa trên vị trí, trạng thái sẵn sàng và các tiêu chí vận hành. |
+| 7 | Tính cước & thanh toán | Tính cước | Xác định số tiền khách hàng phải trả dựa trên loại dịch vụ và thông tin chuyến đi. |
+| 8 | Tính cước & thanh toán | Thanh toán | Hỗ trợ thanh toán tiền mặt hoặc phương thức thanh toán điện tử. |
+| 9 | Thông báo | Thông báo trạng thái | Thông báo các sự kiện quan trọng cho khách hàng và tài xế trong quá trình đặt và thực hiện chuyến. |
+| 10 | Quản trị & vận hành | Theo dõi và xử lý chuyến | Nhân viên vận hành theo dõi chuyến đang diễn ra, trạng thái tài xế và xử lý trường hợp chuyến bị lỗi. |
+| 11 | Báo cáo | Báo cáo hoạt động | Cung cấp số lượng chuyến, doanh thu, tỷ lệ hoàn thành, tỷ lệ hủy và hiệu quả hoạt động của tài xế. |
+| 12 | Xác thực & phân quyền | Kiểm soát truy cập | Xác thực người dùng và kiểm soát quyền đối với các thao tác quản trị. |
 
 ## 5/ Business Requirements
 ### **BẢNG YÊU CẦU NGHIỆP VỤ (BUSINESS REQUIREMENTS)**
-| ID | Business Requirement | Mô tả |
-|---|---|---|
-| **BR-01** | Quản lý đặt xe | Hệ thống hỗ trợ đặt và thực hiện chuyến đi từ khi tạo yêu cầu đến khi hoàn thành hoặc hủy. |
-| **BR-02** | Quản lý khách hàng | Hệ thống quản lý tài khoản và thông tin hồ sơ khách hàng. |
-| **BR-03** | Quản lý tài xế | Hệ thống quản lý tài khoản, hồ sơ và trạng thái hoạt động của tài xế. |
-| **BR-04** | Quản lý phương tiện | Hệ thống quản lý thông tin phương tiện phục vụ vận chuyển. |
-| **BR-05** | Tìm và phân công tài xế | Hệ thống tự động tìm và phân công tài xế phù hợp dựa trên vị trí, trạng thái và tiêu chí vận hành. |
-| **BR-06** | Xử lý tài xế không nhận chuyến | Hệ thống tự động tìm tài xế khác khi tài xế từ chối hoặc không phản hồi. |
-| **BR-07** | Theo dõi chuyến đi | Hệ thống hỗ trợ theo dõi trạng thái, vị trí và thời gian dự kiến của chuyến đi. |
-| **BR-08** | Tính cước và thanh toán | Hệ thống tính cước và hỗ trợ thanh toán tiền mặt hoặc thanh toán điện tử qua nhà cung cấp bên ngoài. |
-| **BR-09** | Xử lý kết quả thanh toán | Hệ thống ghi nhận trạng thái giao dịch, thông báo kết quả và hỗ trợ xử lý lại khi thanh toán thất bại. |
-| **BR-10** | Quản lý thông báo | Hệ thống gửi thông báo cho khách hàng và tài xế về các sự kiện quan trọng của chuyến đi. |
-| **BR-11** | Hỗ trợ vận hành | Hệ thống hỗ trợ nhân viên vận hành theo dõi chuyến, trạng thái tài xế và xử lý sự cố. |
-| **BR-12** | Quản lý và tra cứu dữ liệu | Hệ thống tập trung và hỗ trợ tra cứu dữ liệu khách hàng, tài xế, phương tiện, chuyến đi và giao dịch. |
-| **BR-13** | Báo cáo hoạt động | Hệ thống cung cấp báo cáo về số chuyến, doanh thu, tỷ lệ hoàn thành, tỷ lệ hủy và hiệu quả tài xế. |
-| **BR-14** | Đánh giá dịch vụ | Hệ thống cho phép khách hàng đánh giá tài xế sau khi chuyến đi hoàn thành. |
-| **BR-15** | Bảo mật và phân quyền | Hệ thống kiểm soát quyền truy cập và bảo vệ thông tin người dùng, phương tiện, vị trí và giao dịch. |
-| **BR-16** | Lưu vết hoạt động | Hệ thống ghi nhận các thao tác quan trọng để kiểm tra và xử lý sự cố. |
-| **BR-17** | Đảm bảo ổn định và mở rộng | Hệ thống phải hoạt động ổn định và có khả năng mở rộng khi số lượng người dùng và chuyến đi tăng. |
+| Mã | Business Requirement | Mô tả | 
+| ----- | ----- | ----- | 
+| **BR-01** | Hỗ trợ khách hàng sử dụng dịch vụ đặt xe | Đáp ứng nhu cầu đăng ký, sử dụng dịch vụ đặt xe và quản lý thông tin cá nhân của khách hàng. | 
+| **BR-02** | Tiếp nhận và quản lý yêu cầu đặt xe | Đảm bảo yêu cầu đặt xe được tiếp nhận và quản lý từ khi khách hàng gửi yêu cầu. | 
+| **BR-03** | Đảm bảo tìm và phân công tài xế phù hợp | Hỗ trợ doanh nghiệp tìm tài xế phù hợp dựa trên vị trí, trạng thái sẵn sàng và các tiêu chí vận hành. | 
+| **BR-04** | Đảm bảo xử lý việc phân công khi tài xế không nhận chuyến | Cho phép quá trình tìm tài xế tiếp tục khi tài xế được đề xuất không phản hồi hoặc từ chối, không yêu cầu khách hàng tạo lại yêu cầu. | 
+| **BR-05** | Quản lý và theo dõi chuyến đi | Đảm bảo chuyến đi được theo dõi từ khi tìm tài xế đến khi hoàn thành, với trạng thái chuyến rõ ràng. | 
+| **BR-06** | Hỗ trợ tài xế thực hiện chuyến đi | Đảm bảo tài xế có thể tiếp nhận và cập nhật tình trạng chuyến trong quá trình phục vụ khách hàng. | 
+| **BR-07** | Tính cước chuyến đi | Xác định số tiền khách hàng phải trả dựa trên loại dịch vụ và thông tin chuyến đi. | 
+| **BR-08** | Hỗ trợ thanh toán chuyến đi | Đáp ứng thanh toán bằng tiền mặt hoặc phương thức thanh toán điện tử và xử lý kết quả thanh toán. | 
+| **BR-09** | Đảm bảo thông tin thanh toán được quản lý an toàn | Thông tin nhạy cảm của thẻ hoặc tài khoản thanh toán không được lưu trực tiếp trong hệ thống CAB. | 
+| **BR-10** | Đảm bảo thông báo trong quá trình cung cấp dịch vụ | Khách hàng và tài xế nhận được các thông báo cần thiết liên quan đến yêu cầu và chuyến đi. | 
+| **BR-11** | Hỗ trợ vận hành và giám sát hoạt động đặt xe | Nhân viên vận hành có khả năng theo dõi chuyến đi, trạng thái tài xế, quản lý thông tin liên quan và xử lý các trường hợp chuyến bị lỗi. | 
+| **BR-12** | Cung cấp dữ liệu phục vụ quản lý hoạt động kinh doanh | Cung cấp thông tin về số lượng chuyến, doanh thu, tỷ lệ hoàn thành, tỷ lệ hủy và hiệu quả hoạt động của tài xế. | 
+| **BR-13** | Đảm bảo kiểm soát truy cập và bảo vệ dữ liệu | Đảm bảo người dùng được xác thực, thao tác quản trị được kiểm soát quyền truy cập và các dữ liệu quan trọng được bảo vệ. | 
+| **BR-14** | Đảm bảo khả năng hoạt động ổn định khi nhu cầu tăng cao | Hệ thống phải duy trì hoạt động khi nhu cầu tăng cao và lỗi ở chức năng thanh toán hoặc thông báo không làm toàn bộ hệ thống đặt xe ngừng hoạt động. |
 
 
 ## 6/ Functional Requirements
 ### BẢNG PHÂN RÃ YÊU CẦU CHỨC NĂNG (FUNCTIONAL REQUIREMENTS)
-| ID | Business Requirement | Functional Requirement |
-|---|---|---|
-| **FR-01.01** | **BR-01 Quản lý đặt xe** | Hệ thống cho phép khách hàng tạo, theo dõi và hủy yêu cầu/chuyến đi theo chính sách. |
-| **FR-02.01** | **BR-02 Quản lý khách hàng** | Hệ thống cho phép khách hàng đăng ký, đăng nhập và cập nhật thông tin cá nhân. |
-| **FR-02.02** | | Hệ thống lưu trữ và quản lý thông tin tài khoản khách hàng. |
-| **FR-03.01** | **BR-03 Quản lý tài xế** | Hệ thống cho phép tạo tài khoản, cập nhật hồ sơ và trạng thái hoạt động của tài xế. |
-| **FR-03.02** | | Hệ thống ghi nhận trạng thái sẵn sàng nhận chuyến của tài xế. |
-| **FR-04.01** | **BR-04 Quản lý phương tiện** | Hệ thống cho phép nhân viên vận hành tạo và cập nhật thông tin phương tiện. |
-| **FR-04.02** | | Hệ thống cho phép liên kết phương tiện với tài xế. |
-| **FR-05.01** | **BR-05 Tìm và phân công tài xế** | Hệ thống xác định tài xế phù hợp dựa trên vị trí, trạng thái và tiêu chí vận hành. |
-| **FR-05.02** | | Hệ thống ưu tiên và gửi yêu cầu chuyến đến tài xế phù hợp. |
-| **FR-05.03** | | Hệ thống ghi nhận tài xế được phân công và nhận chuyến. |
-| **FR-06.01** | **BR-06 Xử lý tài xế không nhận chuyến** | Hệ thống ghi nhận trường hợp tài xế từ chối hoặc không phản hồi. |
-| **FR-06.02** | | Hệ thống tự động tìm và gửi yêu cầu đến tài xế phù hợp tiếp theo. |
-| **FR-06.03** | | Hệ thống thông báo cho khách hàng khi không tìm được tài xế. |
-| **FR-07.01** | **BR-07 Theo dõi chuyến đi** | Hệ thống tạo và cập nhật trạng thái chuyến đi từ khi nhận chuyến đến khi hoàn thành hoặc hủy. |
-| **FR-07.02** | | Hệ thống lưu lịch sử và thông tin của chuyến đi. |
-| **FR-08.01** | **BR-08 Theo dõi vị trí và ETA** | Hệ thống ghi nhận và cập nhật vị trí tài xế trong quá trình hoạt động. |
-| **FR-08.02** | | Hệ thống sử dụng vị trí để hỗ trợ phân công tài xế và cung cấp ETA cho khách hàng. |
-| **FR-09.01** | **BR-09 Tính cước** | Hệ thống xác định loại dịch vụ và thông tin cần thiết để tính cước. |
-| **FR-09.02** | | Hệ thống tính và lưu số tiền khách hàng phải trả theo quy tắc cước. |
-| **FR-10.01** | **BR-10 Thanh toán** | Hệ thống hỗ trợ thanh toán bằng tiền mặt và thanh toán điện tử. |
-| **FR-10.02** | | Hệ thống gửi và nhận kết quả giao dịch thông qua nhà cung cấp thanh toán bên ngoài. |
-| **FR-11.01** | **BR-11 Xử lý kết quả thanh toán** | Hệ thống ghi nhận trạng thái và thông báo kết quả giao dịch cho khách hàng. |
-| **FR-11.02** | | Hệ thống hỗ trợ thực hiện lại giao dịch thất bại theo chính sách doanh nghiệp. |
-| **FR-12.01** | **BR-12 Quản lý thông báo** | Hệ thống gửi thông báo cho khách hàng và tài xế về các sự kiện quan trọng của chuyến đi. |
-| **FR-12.02** | | Hệ thống thông báo kết quả thanh toán và các thay đổi liên quan đến chuyến đi. |
-| **FR-13.01** | **BR-13 Hỗ trợ vận hành** | Hệ thống cho phép nhân viên vận hành theo dõi chuyến đi và trạng thái tài xế. |
-| **FR-13.02** | | Hệ thống hỗ trợ tra cứu thông tin, lịch sử chuyến và giao dịch. |
-| **FR-13.03** | | Hệ thống hỗ trợ xử lý các trường hợp chuyến đi bị lỗi. |
-| **FR-14.01** | **BR-14 Quản lý và tra cứu dữ liệu** | Hệ thống lưu trữ tập trung dữ liệu khách hàng, tài xế, phương tiện, chuyến đi và giao dịch. |
-| **FR-14.02** | | Người dùng có quyền có thể tìm kiếm và tra cứu dữ liệu. |
-| **FR-15.01** | **BR-15 Báo cáo hoạt động** | Hệ thống cung cấp báo cáo về số chuyến, doanh thu, tỷ lệ hoàn thành và tỷ lệ hủy. |
-| **FR-15.02** | | Hệ thống cung cấp thông tin về hiệu quả hoạt động của tài xế. |
-| **FR-16.01** | **BR-16 Đánh giá dịch vụ** | Hệ thống cho phép khách hàng đánh giá tài xế sau khi chuyến đi hoàn thành. |
-| **FR-16.02** | | Hệ thống lưu trữ và hỗ trợ tra cứu kết quả đánh giá. |
-| **FR-17.01** | **BR-17 Bảo mật và phân quyền** | Hệ thống xác thực người dùng và phân quyền truy cập theo vai trò. |
-| **FR-17.02** | | Hệ thống bảo vệ thông tin cá nhân, phương tiện, vị trí và giao dịch. |
-| **FR-17.03** | | Hệ thống ghi nhận các thao tác quan trọng để phục vụ kiểm tra và xử lý sự cố. |
-| **FR-17.04** | | Hệ thống đảm bảo các thành phần hoạt động ổn định và có khả năng mở rộng khi quy mô sử dụng tăng. |
+| Mã FR | Functional Requirement | Mô tả |
+| :--- | :--- | :--- |
+| **FR-01** | Đăng ký tài khoản khách hàng | Hệ thống cho phép khách hàng đăng ký tài khoản. |
+| **FR-02** | Đăng nhập và quản lý thông tin khách hàng | Hệ thống cho phép khách hàng đăng nhập và cập nhật thông tin cá nhân. |
+| **FR-03** | Tạo yêu cầu đặt xe | Hệ thống cho phép khách hàng nhập điểm đón, điểm đến, lựa chọn loại xe và gửi yêu cầu đặt xe. |
+| **FR-04** | Theo dõi yêu cầu và chuyến đi | Hệ thống cho phép khách hàng theo dõi trạng thái tìm tài xế, tài xế nhận chuyến, thời gian dự kiến tài xế đến và trạng thái chuyến đi. |
+| **FR-05** | Tra cứu lịch sử và thông tin chuyến đi | Hệ thống cho phép khách hàng xem lịch sử chuyến đi và số tiền phải trả. |
+| **FR-06** | Đánh giá tài xế | Hệ thống cho phép khách hàng đánh giá tài xế sau khi hoàn thành chuyến. |
+| **FR-07** | Đăng ký và quản lý tài khoản tài xế | Hệ thống cho phép tài xế đăng ký hoặc nhân viên vận hành tạo tài khoản cho tài xế. |
+| **FR-08** | Quản lý hồ sơ và phương tiện tài xế | Hệ thống cho phép tài xế cập nhật hồ sơ và thông tin phương tiện. |
+| **FR-09** | Quản lý trạng thái tài xế | Hệ thống cho phép tài xế cập nhật trạng thái hoạt động và trạng thái sẵn sàng nhận chuyến. |
+| **FR-10** | Tiếp nhận và phản hồi chuyến | Hệ thống thông báo cho tài xế về chuyến phù hợp và cho phép tài xế chấp nhận hoặc từ chối chuyến. |
+| **FR-11** | Cập nhật trạng thái thực hiện chuyến | Hệ thống cho phép tài xế cập nhật trạng thái đã đến điểm đón, đã đón khách, đang di chuyển và hoàn thành chuyến. |
+| **FR-12** | Cập nhật và lưu vị trí tài xế | Hệ thống lưu thông tin vị trí của tài xế để phục vụ tìm tài xế gần khách hàng và hỗ trợ dự kiến thời gian đến. |
+| **FR-13** | Tìm tài xế phù hợp | Hệ thống xác định tài xế phù hợp dựa trên vị trí, trạng thái sẵn sàng và các tiêu chí vận hành. Tiêu chí chi tiết cần làm rõ. |
+| **FR-14** | Phân công và tiếp tục tìm tài xế | Hệ thống ưu tiên tài xế phù hợp, gần khách hàng và tiếp tục tìm tài xế khác khi tài xế được đề xuất không phản hồi hoặc từ chối. Tiêu chí ưu tiên và thời gian phản hồi cần làm rõ. |
+| **FR-15** | Xử lý trường hợp không tìm được tài xế | Hệ thống thông báo rõ ràng cho khách hàng khi không tìm được tài xế. |
+| **FR-16** | Quản lý trạng thái chuyến đi | Hệ thống quản lý trạng thái chuyến từ khi tiếp nhận yêu cầu đến khi hoàn thành. |
+| **FR-17** | Tính cước chuyến đi | Hệ thống xác định số tiền khách hàng phải trả dựa trên loại dịch vụ và thông tin chuyến đi. Cách tính cước chi tiết cần làm rõ. |
+| **FR-18** | Thanh toán chuyến đi | Hệ thống hỗ trợ thanh toán bằng tiền mặt hoặc phương thức thanh toán điện tử. |
+| **FR-19** | Xử lý thanh toán điện tử | Hệ thống tích hợp với nhà cung cấp thanh toán bên ngoài và xử lý trường hợp giao dịch điện tử thất bại. |
+| **FR-20** | Thông báo cho khách hàng | Hệ thống thông báo cho khách hàng về việc tiếp nhận yêu cầu, tài xế nhận chuyến, tài xế đến điểm đón, hoàn thành chuyến và kết quả thanh toán. |
+| **FR-21** | Thông báo cho tài xế | Hệ thống thông báo cho tài xế về chuyến mới hoặc những thay đổi liên quan đến chuyến đang thực hiện. |
+| **FR-22** | Quản lý hoạt động vận hành | Hệ thống cho phép nhân viên vận hành quản lý khách hàng, tài xế, phương tiện và chuyến đi. |
+| **FR-23** | Theo dõi và xử lý chuyến đi | Hệ thống cho phép nhân viên vận hành theo dõi chuyến đang diễn ra, kiểm tra trạng thái tài xế và hỗ trợ xử lý các trường hợp chuyến bị lỗi. |
+| **FR-24** | Tra cứu lịch sử giao dịch | Hệ thống cho phép nhân viên vận hành tra cứu lịch sử giao dịch. |
+| **FR-25** | Báo cáo hoạt động | Hệ thống cung cấp báo cáo về số lượng chuyến, doanh thu, tỷ lệ chuyến hoàn thành, tỷ lệ hủy và hiệu quả hoạt động của tài xế. |
+| **FR-26** | Xác thực người dùng | Hệ thống xác thực khách hàng và tài xế trước khi sử dụng các chức năng yêu cầu tài khoản. |
+| **FR-27** | Phân quyền quản trị | Hệ thống kiểm soát quyền truy cập đối với các thao tác quản trị, bảo đảm nhân viên thông thường không thực hiện được các thao tác nhạy cảm. |
+| **FR-28** | Lưu vết thao tác quan trọng | Hệ thống lưu vết các thao tác quan trọng để phục vụ kiểm tra khi có sự cố. |
 
 
 ## 7/ Vẽ use case
