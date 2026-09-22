@@ -105,22 +105,19 @@ quadrantChart
 | **FR-10** | Tiếp nhận và phản hồi chuyến | Hệ thống thông báo cho tài xế về chuyến phù hợp và cho phép tài xế chấp nhận hoặc từ chối chuyến. |
 | **FR-11** | Cập nhật trạng thái thực hiện chuyến | Hệ thống cho phép tài xế cập nhật trạng thái đã đến điểm đón, đã đón khách, đang di chuyển và hoàn thành chuyến. |
 | **FR-12** | Cập nhật và lưu vị trí tài xế | Hệ thống lưu thông tin vị trí của tài xế để phục vụ tìm tài xế gần khách hàng và hỗ trợ dự kiến thời gian đến. |
-| **FR-13** | Tìm tài xế phù hợp | Hệ thống xác định tài xế phù hợp dựa trên vị trí, trạng thái sẵn sàng và các tiêu chí vận hành. Tiêu chí chi tiết cần làm rõ. |
-| **FR-14** | Phân công và tiếp tục tìm tài xế | Hệ thống ưu tiên tài xế phù hợp, gần khách hàng và tiếp tục tìm tài xế khác khi tài xế được đề xuất không phản hồi hoặc từ chối. Tiêu chí ưu tiên và thời gian phản hồi cần làm rõ. |
+| **FR-13** | Tìm tài xế phù hợp | Hệ thống xác định tài xế phù hợp dựa trên vị trí, trạng thái sẵn sàng.|
+| **FR-14** | Phân công và tiếp tục tìm tài xế | Hệ thống ưu tiên tài xế phù hợp, gần khách hàng và tiếp tục tìm tài xế khác khi tài xế được đề xuất không phản hồi hoặc từ chối|
 | **FR-15** | Xử lý trường hợp không tìm được tài xế | Hệ thống thông báo rõ ràng cho khách hàng khi không tìm được tài xế. |
 | **FR-16** | Quản lý trạng thái chuyến đi | Hệ thống quản lý trạng thái chuyến từ khi tiếp nhận yêu cầu đến khi hoàn thành. |
-| **FR-17** | Tính cước chuyến đi | Hệ thống xác định số tiền khách hàng phải trả dựa trên loại dịch vụ và thông tin chuyến đi. Cách tính cước chi tiết cần làm rõ. |
+| **FR-17** | Tính cước chuyến đi | Hệ thống xác định số tiền khách hàng phải trả dựa trên loại dịch vụ và thông tin chuyến đi.|
 | **FR-18** | Thanh toán chuyến đi | Hệ thống hỗ trợ thanh toán bằng tiền mặt hoặc phương thức thanh toán điện tử. |
 | **FR-19** | Xử lý thanh toán điện tử | Hệ thống tích hợp với nhà cung cấp thanh toán bên ngoài và xử lý trường hợp giao dịch điện tử thất bại. |
 | **FR-20** | Thông báo cho khách hàng | Hệ thống thông báo cho khách hàng về việc tiếp nhận yêu cầu, tài xế nhận chuyến, tài xế đến điểm đón, hoàn thành chuyến và kết quả thanh toán. |
 | **FR-21** | Thông báo cho tài xế | Hệ thống thông báo cho tài xế về chuyến mới hoặc những thay đổi liên quan đến chuyến đang thực hiện. |
-| **FR-22** | Quản lý hoạt động vận hành | Hệ thống cho phép nhân viên vận hành quản lý khách hàng, tài xế, phương tiện và chuyến đi. |
-| **FR-23** | Theo dõi và xử lý chuyến đi | Hệ thống cho phép nhân viên vận hành theo dõi chuyến đang diễn ra, kiểm tra trạng thái tài xế và hỗ trợ xử lý các trường hợp chuyến bị lỗi. |
-| **FR-24** | Tra cứu lịch sử giao dịch | Hệ thống cho phép nhân viên vận hành tra cứu lịch sử giao dịch. |
-| **FR-25** | Báo cáo hoạt động | Hệ thống cung cấp báo cáo về số lượng chuyến, doanh thu, tỷ lệ chuyến hoàn thành, tỷ lệ hủy và hiệu quả hoạt động của tài xế. |
-| **FR-26** | Xác thực người dùng | Hệ thống xác thực khách hàng và tài xế trước khi sử dụng các chức năng yêu cầu tài khoản. |
-| **FR-27** | Phân quyền quản trị | Hệ thống kiểm soát quyền truy cập đối với các thao tác quản trị, bảo đảm nhân viên thông thường không thực hiện được các thao tác nhạy cảm. |
-| **FR-28** | Lưu vết thao tác quan trọng | Hệ thống lưu vết các thao tác quan trọng để phục vụ kiểm tra khi có sự cố. |
+| **FR-22** | Báo cáo hoạt động | Hệ thống cung cấp báo cáo về số lượng chuyến, doanh thu, tỷ lệ chuyến hoàn thành, tỷ lệ hủy và hiệu quả hoạt động của tài xế. |
+| **FR-23** | Xác thực người dùng | Hệ thống xác thực khách hàng và tài xế trước khi sử dụng các chức năng yêu cầu tài khoản. |
+| **FR-24** | Phân quyền quản trị | Hệ thống kiểm soát quyền truy cập đối với các thao tác quản trị, bảo đảm nhân viên thông thường không thực hiện được các thao tác nhạy cảm. |
+| **FR-25** | Lưu vết thao tác quan trọng | Hệ thống lưu vết các thao tác quan trọng để phục vụ kiểm tra khi có sự cố. |
 
 
 ## 7/ Vẽ use case
