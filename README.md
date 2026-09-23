@@ -123,132 +123,92 @@ quadrantChart
 ## 7/ Vẽ use case
 ## 7.1/ Xác định Actors
 | STT | Actor | Vai trò |
-| :---: | :--- | :--- |
-| 1 | **Khách hàng** | Sử dụng dịch vụ đặt xe: đăng ký, đăng nhập, quản lý thông tin cá nhân, đặt xe, theo dõi chuyến, hủy chuyến, thanh toán, xem lịch sử và đánh giá tài xế. |
-| 2 | **Tài xế** | Cung cấp dịch vụ vận chuyển: quản lý hồ sơ và phương tiện, cập nhật trạng thái hoạt động, nhận hoặc từ chối chuyến, cập nhật trạng thái chuyến và vị trí. |
-| 3 | **Nhân viên vận hành** | Điều phối và giám sát hoạt động đặt xe; quản lý thông tin khách hàng, tài xế, phương tiện; theo dõi chuyến đi, hỗ trợ xử lý sự cố, tra cứu giao dịch và phân quyền theo chức năng được cấp. |
-| 4 | **Ban giám đốc** | Theo dõi tình hình hoạt động và hiệu quả kinh doanh thông qua các báo cáo về số lượng chuyến, doanh thu, tỷ lệ hoàn thành, tỷ lệ hủy và hiệu quả tài xế. |
-| 5 | **Nhà cung cấp thanh toán** | Tiếp nhận và xử lý các giao dịch thanh toán điện tử, sau đó trả kết quả giao dịch cho hệ thống CAB. |
-| 6 | **Nhà cung cấp thông báo** | Cung cấp dịch vụ gửi thông báo đến khách hàng và tài xế về các sự kiện trong quá trình đặt và thực hiện chuyến. |
+| --- | ----- | ------- |
+| 1 | **Khách hàng** | Sử dụng hệ thống để đặt xe, theo dõi chuyến, thanh toán và đánh giá tài xế. |
+| 2 | **Tài xế** | Nhận chuyến, cập nhật trạng thái, thông tin phương tiện và vị trí. |
+| 3 | **Nhân viên vận hành** | Quản lý và theo dõi hoạt động vận hành của hệ thống. |
+| 4 | **Ban lãnh đạo / Ban giám đốc** | Theo dõi thông tin và báo cáo phục vụ quản lý. |
+| 5 | **Nhà cung cấp thanh toán bên ngoài** | Cung cấp dịch vụ thanh toán điện tử tích hợp với CAB System. |
+| 6 | **Nhà cung cấp thông báo** | Cung cấp kênh/dịch vụ thông báo cho hệ thống. |
 
 ## 7.2/ Sơ đồ use case
-![CAB System Use Case Diagram](usecasediagram.jpg)
 
 ```mermaid
 flowchart LR
 
-%% =========================================================
-%% CAB SYSTEM (Ranh giới hệ thống)
-%% =========================================================
-subgraph CAB_SYSTEM["CAB SYSTEM"]
-    direction TB
+    KH[Khách hàng]
+    TX[Tài xế]
+    NV[Nhân viên vận hành]
+    LD[Ban lãnh đạo / Ban giám đốc]
+    PAY[Nhà cung cấp thanh toán bên ngoài]
 
-    %% Chức năng của Khách hàng (Xanh dương)
-    UC01(["UC01<br/>Đăng ký tài khoản"])
-    UC02(["UC02<br/>Đăng nhập"])
-    UC03_KH(["UC03<br/>Cập nhật hồ sơ"])
-    UC05(["UC05<br/>Đặt xe"])
-    UC08_KH(["UC08<br/>Theo dõi & cập nhật chuyến đi"])
-    UC11(["UC11<br/>Thanh toán chuyến đi"])
-    UC13(["UC13<br/>Xem lịch sử chuyến đi"])
-    UC14(["UC14<br/>Đánh giá tài xế"])
+    subgraph CAB[CAB System - MVP]
 
-    %% Chức năng hệ thống (Vàng)
-    UC06(["UC06<br/>Tìm & phân công tài xế"])
-    UC10(["UC10<br/>Tính cước chuyến đi"])
-    UC12(["UC12<br/>Gửi & tiếp nhận thông báo"])
+        UC01((Đăng ký tài khoản khách hàng))
+        UC02((Đăng nhập và quản lý thông tin khách hàng))
+        UC03((Tạo yêu cầu đặt xe))
+        UC04((Theo dõi yêu cầu và chuyến đi))
+        UC05((Tra cứu lịch sử và thông tin chuyến đi))
+        UC06((Đánh giá tài xế))
 
-    %% Chức năng của Tài xế (Xanh lá)
-    UC03_TX(["UC03<br/>Cập nhật hồ sơ"])
-    UC04(["UC04<br/>Cập nhật thông tin phương tiện"])
-    UC07(["UC07<br/>Nhận hoặc từ chối chuyến"])
-    UC08_TX(["UC08<br/>Theo dõi & cập nhật chuyến đi"])
-    UC09(["UC09<br/>Cập nhật vị trí tài xế"])
+        UC07((Đăng ký và quản lý tài khoản tài xế))
+        UC08((Quản lý hồ sơ và phương tiện))
+        UC09((Quản lý trạng thái tài xế))
+        UC10((Tiếp nhận và phản hồi chuyến))
+        UC11((Cập nhật trạng thái thực hiện chuyến))
+        UC12((Cập nhật và lưu vị trí tài xế))
 
-    %% Chức năng của Nhân viên vận hành & Ban giám đốc (Tím)
-    UC15(["UC15<br/>Tra cứu & cập nhật thông tin đối tượng"])
-    UC16(["UC16<br/>Hỗ trợ & xử lý chuyến"])
-    UC17(["UC17<br/>Tra cứu giao dịch"])
-    UC18(["UC18<br/>Xem báo cáo hoạt động"])
-    UC19(["UC19<br/>Phân quyền người dùng"])
-    UC20(["UC20<br/>Thiết lập cấu hình hệ thống"])
+        UC13((Tìm và phân công tài xế))
+        UC14((Xử lý không tìm được tài xế))
 
-end
+        UC15((Tính cước chuyến đi))
+        UC16((Thanh toán chuyến đi))
 
-%% =========================================================
-%% ACTORS (Tác nhân)
-%% =========================================================
-ACTOR_KH["👤 Khách hàng"]
-ACTOR_TX["👤 Tài xế"]
-ACTOR_NVVH["👤 Nhân viên vận hành"]
-ACTOR_BGD["👤 Ban giám đốc"]
-ACTOR_PAYMENT["🏛️ Nhà cung cấp thanh toán"]
-ACTOR_NOTIF["✉️ Nhà cung cấp thông báo"]
+        UC17((Thông báo khách hàng))
+        UC18((Thông báo tài xế))
 
-%% =========================================================
-%% LIÊN KẾT TÁC NHÂN -> USE CASE (Association)
-%% =========================================================
+        UC19((Quản lý hoạt động vận hành))
+        UC20((Theo dõi và xử lý chuyến đi))
+        UC21((Tra cứu lịch sử giao dịch))
+        UC22((Báo cáo hoạt động))
 
-%% Khách hàng
-ACTOR_KH --- UC01
-ACTOR_KH --- UC02
-ACTOR_KH --- UC03_KH
-ACTOR_KH --- UC05
-ACTOR_KH --- UC08_KH
-ACTOR_KH --- UC11
-ACTOR_KH --- UC13
-ACTOR_KH --- UC14
+        UC23((Xác thực người dùng))
+        UC24((Phân quyền quản trị))
+        UC25((Lưu vết thao tác quan trọng))
+    end
 
-%% Tài xế
-ACTOR_TX --- UC03_TX
-ACTOR_TX --- UC04
-ACTOR_TX --- UC07
-ACTOR_TX --- UC08_TX
-ACTOR_TX --- UC09
+    NOTI[Nhà cung cấp thông báo]
 
-%% Nhân viên vận hành
-ACTOR_NVVH --- UC15
-ACTOR_NVVH --- UC16
-ACTOR_NVVH --- UC17
-ACTOR_NVVH --- UC18
-ACTOR_NVVH --- UC19
-ACTOR_NVVH --- UC20
+    KH --- UC01
+    KH --- UC02
+    KH --- UC03
+    KH --- UC04
+    KH --- UC05
+    KH --- UC06
+    KH --- UC16
+    KH --- UC17
+    KH --- UC23
 
-%% Ban giám đốc
-ACTOR_BGD --- UC18
+    TX --- UC07
+    TX --- UC08
+    TX --- UC09
+    TX --- UC10
+    TX --- UC11
+    TX --- UC12
+    TX --- UC18
+    TX --- UC23
 
-%% Tác nhân bên ngoài
-UC11 -. "Xử lý thanh toán điện tử" .-> ACTOR_PAYMENT
-UC12 -. "Gửi thông báo" .-> ACTOR_NOTIF
+    NV --- UC07
+    NV --- UC13
+    NV --- UC19
+    NV --- UC20
+    NV --- UC21
+    NV --- UC22
+    NV --- UC24
+    NV --- UC25
+    NV --- UC23
 
-%% =========================================================
-%% MỐI QUAN HỆ GIỮA CÁC USE CASE (Include & Extend)
-%% =========================================================
-UC05 -. "include" .-> UC06
-UC05 -. "include" .-> UC10
-UC11 -. "include" .-> UC10
-UC10 -. "include" .-> UC12
-UC07 -. "extend" .-> UC06
-
-%% =========================================================
-%% STYLES (Định dạng màu sắc theo đúng chú thích trong ảnh)
-%% =========================================================
-classDef actorStyle fill:#ffffff,stroke:#333333,stroke-width:2px,color:#222222;
-classDef externalStyle fill:#ffffff,stroke:#1d70b8,stroke-width:2px,color:#1d70b8;
-
-classDef customerUC fill:#e8f0fe,stroke:#4285f4,stroke-width:1.5px,color:#1a73e8;
-classDef driverUC fill:#e6f4ea,stroke:#34a853,stroke-width:1.5px,color:#137333;
-classDef systemUC fill:#fef7e0,stroke:#fbbc04,stroke-width:1.5px,color:#b06000;
-classDef adminUC fill:#fce8e6,stroke:#ea4335,stroke-width:1.5px,color:#c5221f;
-
-%% Áp dụng Style
-class ACTOR_KH,ACTOR_TX,ACTOR_NVVH,ACTOR_BGD actorStyle;
-class ACTOR_PAYMENT,ACTOR_NOTIF externalStyle;
-
-class UC01,UC02,UC03_KH,UC05,UC08_KH,UC11,UC13,UC14 customerUC;
-class UC03_TX,UC04,UC07,UC08_TX,UC09 driverUC;
-class UC06,UC10,UC12 systemUC;
-class UC15,UC16,UC17,UC18,UC19,UC20 adminUC;
+    PAY --- UC16
 ```
 
 
@@ -657,154 +617,134 @@ class UC15,UC16,UC17,UC18,UC19,UC20 adminUC;
 | **Exception** | **6.1 Giá trị cấu hình không hợp lệ:** Hệ thống phát hiện giá trị không nằm trong phạm vi cho phép → Hiển thị thông báo lỗi → Nhân viên nhập lại giá trị → Quay lại bước 5.<br>**10.1 Không thể lưu cấu hình:** Hệ thống phát hiện lỗi khi lưu → Không áp dụng cấu hình mới → Hiển thị thông báo lỗi → Nhân viên thực hiện lại → Quay lại bước 7. | |
 
 ## 9/ Phân tích quy trình nghiệp vụ (Business Project)
-![Business Project](BusinessProject.jpg)
 
 ```mermaid
-flowchart TD
+flowchart LR
 
-%% =========================================================
-%% GIAO ĐOẠN QUY TRÌNH (STAGES)
-%% =========================================================
-subgraph STAGES["PHÂN TÍCH QUY TRÌNH NGHIỆP VỤ (BUSINESS PROJECT) - CAB SYSTEM"]
-direction LR
-    ST1["1. ĐẶT XE"]
-    ST2["2. TÌM VÀ PHÂN CÔNG TÀI XẾ"]
-    ST3["3. THỰC HIỆN CHUYẾN ĐI"]
-    ST4["4. THANH TOÁN"]
-    ST5["5. HOÀN THÀNH & ĐÁNH GIÁ"]
-    ST1 ---> ST2 ---> ST3 ---> ST4 ---> ST5
-end
+    %% =========================
+    %% SWIMLANES
+    %% =========================
 
-%% =========================================================
-%% SWIMLANES (LÀN TÁC NHÂN)
-%% =========================================================
+    subgraph KH["KHÁCH HÀNG"]
+        A([Bắt đầu])
+        B["Nhập điểm đón, điểm đến,<br/>lựa chọn loại xe và gửi yêu cầu đặt xe"]
+        C["Theo dõi trạng thái tìm tài xế<br/>và trạng thái chuyến đi"]
+        D["Thanh toán"]
+        E["Nhận thông báo kết quả"]
+        F["Đánh giá tài xế"]
+        G([Kết thúc])
+    end
 
-%% 1. KHÁCH HÀNG
-subgraph LANE_CUSTOMER["👤 KHÁCH HÀNG"]
-    direction LR
-    N1_1["1.1 Đăng ký/Đăng nhập"]
-    N1_2["1.2 Nhập thông tin đặt xe<br/>(điểm đón, điểm đến, loại xe)"]
-    N1_3["1.3 Xem tài xế được gợi ý<br/>và thời gian dự kiến"]
-    N1_4["1.4 Hủy chuyến<br/>(nếu cần)"]
-    N1_5["1.5 Theo dõi vị trí tài xế<br/>và trạng thái chuyến"]
-    N1_10["1.10 Thanh toán chuyến đi"]
-    N1_11["1.11 Xem lịch sử chuyến"]
-    N1_12["1.12 Đánh giá tài xế"]
-end
+    subgraph HT["HỆ THỐNG CAB"]
+        H["Tiếp nhận yêu cầu đặt xe"]
+        I["Thông báo đã tiếp nhận yêu cầu"]
+        J["Tìm tài xế phù hợp"]
+        K{"Có tài xế phù hợp?"}
+        L["Đề xuất/phân công tài xế"]
+        M{"Tài xế nhận chuyến?"}
+        N["Tiếp tục tìm tài xế khác"]
+        O["Thông báo không tìm được tài xế"]
+        P["Quản lý trạng thái chuyến đi"]
+        Q["Tính cước chuyến đi"]
+        R{"Phương thức thanh toán?"}
+        S["Xử lý thanh toán điện tử"]
+        T{"Thanh toán điện tử<br/>thành công?"}
+        U["Thông báo thanh toán thất bại<br/>và xử lý lại theo chính sách"]
+        V["Ghi nhận thanh toán"]
+        W["Thông báo kết quả"]
+    end
 
-%% 2. TÀI XẾ
-subgraph LANE_DRIVER["🚘 TÀI XẾ"]
-    direction LR
-    N2_1["2.1 Nhận yêu cầu chuyến"]
-    N2_2{"2.2 Chấp nhận chuyến?"}
-    N2_3["2.3 Từ chối chuyến"]
-    N2_4["2.4 Nhận chuyến"]
-    N2_5["2.5 Di chuyển tới điểm đón"]
-    N2_6_1["2.6 Đón khách"]
-    N2_6_2["2.6 Di chuyển tới điểm đến"]
-    N2_7["2.7 Hoàn thành chuyến"]
-    N2_9["2.9 Cập nhật trạng thái<br/>chuyến và vị trí"]
-end
+    subgraph TX["TÀI XẾ"]
+        X["Nhận thông báo chuyến phù hợp"]
+        Y["Chấp nhận hoặc từ chối chuyến"]
+        Z["Cập nhật trạng thái:<br/>đã đến điểm đón"]
+        AA["Cập nhật trạng thái:<br/>đã đón khách"]
+        AB["Cập nhật trạng thái:<br/>đang di chuyển"]
+        AC["Cập nhật trạng thái:<br/>hoàn thành chuyến"]
+    end
 
-%% 3. NHÂN VIÊN VẬN HÀNH
-subgraph LANE_OPERATOR["🎧 NHÂN VIÊN VẬN HÀNH"]
-    direction LR
-    N3_1["3.1 Hỗ trợ tìm tài xế<br/>khi hệ thống không tìm được"]
-    N3_2["3.2 Theo dõi chuyến đi,<br/>trạng thái tài xế"]
-    N3_3["3.3 Xử lý sự cố, hỗ trợ<br/>khách hàng/tài xế"]
-    N3_4["3.4 Tra cứu giao dịch,<br/>kiểm tra thanh toán"]
-end
+    %% =========================
+    %% MAIN FLOW
+    %% =========================
 
-%% 4. BAN GIÁM ĐỐC
-subgraph LANE_BOARD["📊 BAN GIÁM ĐỐC"]
-    direction LR
-    N4_1["4.1 Xem báo cáo hoạt động<br/>(doanh thu, số chuyến, tỷ lệ hoàn thành, hủy...)"]
-end
+    A --> B
+    B --> H
+    H --> I
+    I --> C
+    I --> J
+    J --> K
 
-%% =========================================================
-%% LUỒNG NGHIỆP VỤ & LIÊN KẾT (FLOWS & CONNECTIONS)
-%% =========================================================
+    K -- "Có" --> L
+    L --> X
+    X --> Y
+    Y --> M
 
-%% Làn Khách hàng
-N1_1 --> N1_2
-N1_2 -.-> N2_1
-N1_3 -.-> N1_4
-N1_10 --> N1_11
-N1_10 --> N1_12
+    M -- "Nhận chuyến" --> P
+    M -- "Từ chối / không phản hồi" --> N
+    N --> J
 
-%% Làn Tài xế
-N2_1 --> N2_2
-N2_2 -- "Không" --> N2_3
-N2_2 -- "Có" --> N2_4
-N2_3 -.-> N3_1
-N2_4 -.-> N1_3
-N2_4 --> N2_5
-N2_5 --> N2_6_1
-N2_6_1 --> N2_6_2
-N2_6_2 --> N2_7
+    K -- "Không" --> O
+    O --> E
+    E --> G
 
-%% Cập nhật vị trí & trạng thái
-N2_5 -.-> N2_9
-N2_6_1 -.-> N2_9
-N2_6_2 -.-> N2_9
-N2_9 -.-> N1_5
+    P --> Z
+    Z --> P
+    P --> AA
+    AA --> P
+    P --> AB
+    AB --> P
+    P --> AC
+    AC --> P
 
-%% Làn Nhân viên Vận hành
-N3_1 -.-> N1_3
-N3_2 --> N3_3
-N2_9 -.-> N3_2
-N2_7 -.-> N3_4
-N1_10 -.-> N3_4
+    P --> Q
+    Q --> R
 
-%% Làn Ban Giám đốc
-N2_7 -.-> N4_1
-N1_12 -.-> N4_1
+    R -- "Tiền mặt" --> V
+    R -- "Điện tử" --> S
+    S --> T
 
-%% Chuyển giao qua Thanh toán
-N2_7 -.-> N1_10
+    T -- "Thành công" --> V
+    T -- "Thất bại" --> U
+    U --> S
 
-%% =========================================================
-%% STYLES & COLORS
-%% =========================================================
-classDef stageStyle fill:#f1f3f4,stroke:#5f6368,stroke-width:1px,color:#202124,font-weight:bold;
-classDef custStyle fill:#e8f0fe,stroke:#4285f4,stroke-width:1.5px,color:#174ea6;
-classDef drivStyle fill:#e6f4ea,stroke:#34a853,stroke-width:1.5px,color:#0d652d;
-classDef operStyle fill:#f3e8fd,stroke:#9333ea,stroke-width:1.5px,color:#581c87;
-classDef boardStyle fill:#fef7e0,stroke:#fbbc04,stroke-width:1.5px,color:#b06000;
+    V --> W
+    W --> E
+    E --> F
+    F --> G
 
-class ST1,ST2,ST3,ST4,ST5 stageStyle;
-class N1_1,N1_2,N1_3,N1_4,N1_5,N1_10,N1_11,N1_12 custStyle;
-class N2_1,N2_2,N2_3,N2_4,N2_5,N2_6_1,N2_6_2,N2_7,N2_9 drivStyle;
-class N3_1,N3_2,N3_3,N3_4 operStyle;
-class N4_1 boardStyle;
+    %% =========================
+    %% CẦN LÀM RÕ
+    %% =========================
+
+    J -.-> CL1["Cần làm rõ:<br/>Tiêu chí chi tiết tìm tài xế"]
+    L -.-> CL2["Cần làm rõ:<br/>Tiêu chí ưu tiên tài xế"]
+    M -.-> CL3["Cần làm rõ:<br/>Thời gian tài xế phải phản hồi"]
+    Q -.-> CL4["Cần làm rõ:<br/>Cách tính cước chi tiết"]
+    U -.-> CL5["Cần làm rõ:<br/>Chính sách xử lý lại thanh toán"]
 ```
 
 
 ## 10/ Phân tích quy tắc nghiệp vụ (Business Rules)
-| ID | Business Rule | Mô tả |
-|---|---|---|
-| **BUS-R01** | Đăng nhập trước khi sử dụng chức năng | Người dùng phải đăng nhập và được xác thực trước khi sử dụng các chức năng yêu cầu tài khoản. |
-| **BUS-R02** | Thông tin đặt xe bắt buộc | Yêu cầu đặt xe phải có tối thiểu **điểm đón, điểm đến và loại xe/dịch vụ**. |
-| **BUS-R03** | Chuyến đi phải có trạng thái | Mỗi chuyến đi phải có trạng thái để phản ánh quá trình xử lý, như: Đang tìm tài xế, Đã nhận, Đang thực hiện, Hoàn thành, Đã hủy. |
-| **BUS-R04** | Chỉ tài xế phù hợp mới được nhận chuyến | Tài xế phải đang **sẵn sàng nhận chuyến**, có phương tiện hợp lệ và phù hợp với loại dịch vụ được yêu cầu. |
-| **BUS-R05** | Ưu tiên tài xế phù hợp và gần điểm đón | Hệ thống ưu tiên tài xế dựa trên vị trí và các tiêu chí vận hành do doanh nghiệp quy định. |
-| **BUS-R06** | Tài xế phải phản hồi yêu cầu chuyến | Tài xế phải chấp nhận hoặc từ chối yêu cầu trong thời gian quy định. |
-| **BUS-R07** | Từ chối hoặc không phản hồi thì tìm tài xế khác | Khi tài xế từ chối hoặc không phản hồi, hệ thống tiếp tục tìm tài xế phù hợp khác mà không yêu cầu khách hàng đặt lại chuyến. |
-| **BUS-R08** | Không tìm được tài xế phải thông báo | Nếu không tìm được tài xế phù hợp, hệ thống phải thông báo rõ ràng cho khách hàng. |
-| **BUS-R09** | Một chuyến chỉ được phân công cho một tài xế | Tại một thời điểm, một chuyến chỉ được xác nhận cho một tài xế. |
-| **BUS-R10** | Trạng thái chuyến phải tuân theo trình tự | Chuyến đi phải được cập nhật theo trình tự nghiệp vụ hợp lệ: **Đã nhận → Đã đến điểm đón → Đã đón khách → Đang di chuyển → Hoàn thành**. |
-| **BUS-R11** | Chỉ tài xế được phân công mới được cập nhật chuyến | Chỉ tài xế được hệ thống phân công mới có quyền cập nhật trạng thái của chuyến tương ứng. |
-| **BUS-R12** | Sử dụng vị trí tài xế trong quá trình vận hành | Hệ thống sử dụng vị trí mới nhất của tài xế để hỗ trợ phân công, theo dõi chuyến và cung cấp thời gian dự kiến đến cho khách hàng. |
-| **BUS-R13** | Chuyến hoàn thành mới xác định cước cuối cùng | Cước cuối cùng được xác định dựa trên thông tin thực tế của chuyến sau khi chuyến hoàn thành. |
-| **BUS-R14** | Cước phụ thuộc vào loại dịch vụ và thông tin chuyến | Số tiền phải trả được tính dựa trên loại dịch vụ và các thông tin liên quan của chuyến theo chính sách giá của doanh nghiệp. |
-| **BUS-R15** | Chỉ sử dụng phương thức thanh toán được hỗ trợ | Khách hàng chỉ được sử dụng các phương thức thanh toán đã được doanh nghiệp cấu hình và cho phép. |
-| **BUS-R16** | Không lưu thông tin thanh toán nhạy cảm | CAB không lưu trực tiếp thông tin nhạy cảm của thẻ/tài khoản; thanh toán điện tử được xử lý thông qua nhà cung cấp thanh toán bên ngoài. |
-| **BUS-R17** | Giao dịch thanh toán phải có trạng thái | Mỗi giao dịch phải được ghi nhận trạng thái như: **Chờ xử lý, Thành công, Thất bại**. |
-| **BUS-R18** | Thanh toán thất bại phải được thông báo | Khi thanh toán điện tử thất bại, hệ thống phải thông báo cho khách hàng và cho phép thực hiện lại theo chính sách. |
-| **BUS-R19** | Gửi thông báo khi có sự kiện quan trọng | Hệ thống phải thông báo các sự kiện quan trọng như tài xế nhận chuyến, tài xế đến điểm đón, chuyến hoàn thành và kết quả thanh toán. |
-| **BUS-R20** | Lỗi dịch vụ thông báo không làm dừng nghiệp vụ chính | Khi dịch vụ thông báo gặp lỗi, các chức năng cốt lõi như đặt xe và xử lý chuyến vẫn phải tiếp tục hoạt động trong phạm vi cho phép. |
-| **BUS-R21** | Truy cập chức năng theo quyền | Người dùng và nhân viên vận hành chỉ được truy cập các chức năng và dữ liệu phù hợp với quyền được cấp. |
-| **BUS-R22** | Dữ liệu và thao tác quan trọng phải được bảo vệ, lưu vết | Thông tin cá nhân, phương tiện, vị trí và giao dịch phải được bảo vệ; các thao tác quan trọng phải được ghi nhận để phục vụ kiểm tra và xử lý sự cố. |
-| **BUS-R23** | Chỉ đánh giá sau khi chuyến hoàn thành | Khách hàng chỉ được đánh giá tài xế đối với chuyến đã hoàn thành và mỗi chuyến chỉ có một đánh giá của khách hàng. |
-| **BUS-R24** | Dữ liệu báo cáo phải dựa trên dữ liệu thực tế | Báo cáo về số chuyến, doanh thu, tỷ lệ hoàn thành, tỷ lệ hủy và hiệu quả tài xế phải được tổng hợp từ dữ liệu chuyến và giao dịch thực tế. |
-| **BUS-R25** | Dữ liệu và dịch vụ phải có khả năng mở rộng | Hệ thống phải hỗ trợ mở rộng dịch vụ, phương thức thanh toán và nhà cung cấp thông báo trong tương lai mà hạn chế ảnh hưởng đến các chức năng cốt lõi. |
+| Mã BR | Business Rule | Điều kiện/Quy định | Mô tả |
+| ----- | ----- | ----- | ----- |
+| **BR-01** | Xác thực tài khoản | Khách hàng và tài xế phải được xác thực trước khi sử dụng các chức năng yêu cầu tài khoản. | Chỉ người dùng đã được xác thực mới được sử dụng các chức năng yêu cầu tài khoản. |
+| **BR-02** | Thông tin đặt xe phải có điểm đón, điểm đến và loại xe | Khi khách hàng tạo yêu cầu đặt xe, phải nhập điểm đón, điểm đến và lựa chọn loại xe. | Đây là các thông tin được xác định trong nghiệp vụ tạo yêu cầu đặt xe. |
+| **BR-03** | Tài xế phải ở trạng thái sẵn sàng để được xem xét tìm chuyến | Khi hệ thống tìm tài xế, tài xế phù hợp được xác định dựa trên vị trí, trạng thái sẵn sàng và các tiêu chí vận hành. | Trạng thái sẵn sàng là một điều kiện để xác định tài xế phù hợp. Tiêu chí vận hành chi tiết cần làm rõ. |
+| **BR-04** | Tài xế phải được thông báo về chuyến phù hợp | Khi có yêu cầu chuyến phù hợp với tài xế, tài xế nhận được thông báo và có thể chấp nhận hoặc từ chối chuyến. | Quy tắc xác định quyền phản hồi của tài xế đối với chuyến được đề xuất. |
+| **BR-05** | Tiếp tục tìm tài xế khi tài xế không nhận chuyến | Nếu tài xế được đề xuất từ chối hoặc không phản hồi, hệ thống tiếp tục tìm tài xế khác. | Khách hàng không phải tạo lại yêu cầu đặt xe khi tài xế đầu tiên không nhận chuyến. |
+| **BR-06** | Tiêu chí ưu tiên tài xế chưa được chốt | Hệ thống có yêu cầu ưu tiên tài xế phù hợp và gần khách hàng, nhưng tiêu chí ưu tiên cụ thể chưa được xác định. | Không tự đặt công thức hoặc thứ tự ưu tiên. Cần làm rõ. |
+| **BR-07** | Phải thông báo khi không tìm được tài xế | Khi không tìm được tài xế, khách hàng phải được thông báo rõ ràng. | Đây là quy định bắt buộc đối với trường hợp không có tài xế phù hợp. |
+| **BR-08** | Thời gian phản hồi của tài xế chưa được xác định | Việc tài xế được xem là “không phản hồi” phụ thuộc vào thời gian phản hồi chưa được doanh nghiệp chốt. | Cần làm rõ thời gian tài xế phải phản hồi trước khi hệ thống tiếp tục tìm tài xế khác. |
+| **BR-09** | Chuyến đi phải được quản lý trạng thái xuyên suốt | Trạng thái chuyến được quản lý từ khi tiếp nhận yêu cầu đến khi hoàn thành. | Hệ thống phải duy trì việc quản lý trạng thái trong toàn bộ vòng đời chuyến theo nghiệp vụ đã xác định. |
+| **BR-10** | Tài xế phải cập nhật các trạng thái thực hiện chuyến | Trong quá trình thực hiện chuyến, tài xế cập nhật: đã đến điểm đón, đã đón khách, đang di chuyển và hoàn thành chuyến. | Các trạng thái này được đề bài/FR xác định trực tiếp. |
+| **BR-11** | Chỉ tính cước sau khi chuyến hoàn thành | Sau khi chuyến đi hoàn thành, hệ thống xác định số tiền khách hàng phải trả. | Thời điểm tính cước được đề bài xác định là sau khi chuyến hoàn thành. |
+| **BR-12** | Tiền cước phụ thuộc vào loại dịch vụ và thông tin chuyến đi | Số tiền phải trả được xác định dựa trên loại dịch vụ và thông tin chuyến đi. | Công thức và các thành phần tính cước chi tiết cần làm rõ. |
+| **BR-13** | Hỗ trợ hai nhóm phương thức thanh toán | Khách hàng có thể thanh toán bằng tiền mặt hoặc phương thức thanh toán điện tử. | Đây là các phương thức thanh toán được xác định trong MVP. |
+| **BR-14** | Thanh toán điện tử được thực hiện thông qua nhà cung cấp bên ngoài | Khi khách hàng chọn thanh toán điện tử, hệ thống tích hợp với nhà cung cấp thanh toán bên ngoài. | Thông tin nhạy cảm của thẻ hoặc tài khoản thanh toán không được lưu trực tiếp trong hệ thống CAB. |
+| **BR-15** | Thanh toán điện tử thất bại phải được thông báo và xử lý lại | Nếu giao dịch thanh toán điện tử thất bại, khách hàng phải được thông báo và giao dịch được phép xử lý lại theo chính sách doanh nghiệp. | Cách thức và điều kiện xử lý lại cụ thể cần làm rõ. |
+| **BR-16** | Thông báo các sự kiện quan trọng cho khách hàng | Khách hàng phải nhận thông báo khi yêu cầu được tiếp nhận, tài xế nhận chuyến, tài xế đến điểm đón, chuyến hoàn thành và thanh toán có kết quả. | Quy định các sự kiện nghiệp vụ bắt buộc phải thông báo cho khách hàng. |
+| **BR-17** | Thông báo cho tài xế về chuyến và thay đổi liên quan | Tài xế phải được thông báo về chuyến mới hoặc những thay đổi liên quan đến chuyến đang thực hiện. | Quy định phạm vi các sự kiện cần thông báo cho tài xế. |
+| **BR-18** | Kiểm soát quyền truy cập quản trị | Các thao tác quản trị phải được kiểm soát quyền truy cập; nhân viên thông thường không được thực hiện các thao tác nhạy cảm. | Quyền thực hiện thao tác quản trị phụ thuộc vào quyền truy cập được cấp. |
+| **BR-19** | Bảo vệ dữ liệu | Thông tin cá nhân, thông tin phương tiện, dữ liệu vị trí và dữ liệu giao dịch phải được bảo vệ. | Đây là yêu cầu bắt buộc đối với các nhóm dữ liệu được đề bài xác định. |
+| **BR-20** | Không lưu trực tiếp thông tin thanh toán nhạy cảm trong CAB | Thông tin nhạy cảm của thẻ hoặc tài khoản thanh toán không được lưu trực tiếp trong hệ thống CAB. | Đây là ràng buộc nghiệp vụ liên quan đến xử lý thanh toán điện tử. |
+| **BR-21** | Lưu vết các thao tác quan trọng | Các thao tác quan trọng phải được lưu vết để phục vụ kiểm tra khi có sự cố. | Việc lưu vết được yêu cầu ở mức nghiệp vụ; thời gian lưu trữ dữ liệu cần làm rõ. |
