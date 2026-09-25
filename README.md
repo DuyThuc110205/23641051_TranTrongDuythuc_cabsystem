@@ -213,106 +213,111 @@ flowchart LR
 
 
 ## 8/ Đặc tả use case
-### 8.1/ Đặc tả use case Đăng ký tài khoản
+### 8.1/ Đặc tả use case Đăng ký tài khoản khách hàng
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
-| **Tên Use Case** | Đăng ký tài khoản | |
-| **Tiền điều kiện** | Người dùng chưa có tài khoản trên hệ thống và hệ thống đang hoạt động bình thường. | |
-| **Hậu điều kiện** | Tài khoản được tạo thành công và thông tin tài khoản được lưu vào CSDL. Người dùng có thể sử dụng tài khoản để đăng nhập. | |
+| **Tên Use Case** | Đăng ký tài khoản khách hàng | |
+| **Tiền điều kiện** | - Khách hàng chưa có tài khoản trên hệ thống.<br>- Hệ thống đang hoạt động bình thường. | |
+| **Hậu điều kiện** | - Tài khoản khách hàng được tạo thành công.<br>- Thông tin tài khoản được lưu trên hệ thống.<br>- Khách hàng có thể sử dụng tài khoản để đăng nhập. | |
 | **Actor chính** | Khách hàng | |
 | **Actor phụ** | Không | |
 | **Basic flow** | **Actor (Khách hàng)** | **System (Hệ thống)** |
-| | 1. Chọn chức năng “Đăng ký tài khoản” | 2. Hiển thị biểu mẫu đăng ký tài khoản |
-| | 3. Nhập họ tên, số điện thoại, email và mật khẩu | 4. Kiểm tra tính hợp lệ của thông tin đăng ký |
-| | | 5. Kiểm tra số điện thoại và email chưa được sử dụng |
-| | 6. Chọn “Đăng ký” | 7. Hiển thị yêu cầu xác nhận đăng ký |
-| | 8. Chọn “Xác nhận” | 9. Tạo tài khoản mới và lưu thông tin |
-| | | 10. Hiển thị thông báo “Đăng ký tài khoản thành công” |
-| | | 11. Kết thúc Use Case |
-| **Alternative flow** | **6.1 Khách hàng hủy đăng ký:** Khách hàng chọn “Hủy” → Hệ thống không tạo tài khoản → Quay về màn hình trước đó.<br>**8.1 Khách hàng hủy xác nhận:** Khách hàng chọn “Hủy” → Hệ thống không lưu thông tin đăng ký → Giữ nguyên biểu mẫu → Quay lại bước 6. | |
-| **Exception** | **4.1 Thông tin đăng ký không hợp lệ:** Hệ thống phát hiện thông tin chưa đầy đủ hoặc sai định dạng → Thông báo lỗi → Khách hàng nhập lại thông tin → Quay lại bước 3.<br>**5.1 Số điện thoại hoặc email đã tồn tại:** Hệ thống phát hiện thông tin đã được sử dụng → Thông báo lỗi → Khách hàng nhập thông tin khác → Quay lại bước 3. | |
-
-### 8.2/ Đặc tả use case Đăng nhập
-| Thành phần | Nội dung | |
-| :--- | :--- | :--- |
-| **Tên Use Case** | Đăng nhập | |
-| **Tiền điều kiện** | Người dùng đã có tài khoản và tài khoản đang ở trạng thái được phép đăng nhập. | |
-| **Hậu điều kiện** | Người dùng đăng nhập thành công, hệ thống xác định vai trò và quyền truy cập, sau đó hiển thị giao diện phù hợp. | |
-| **Actor chính** | Khách hàng / Tài xế / Nhân viên vận hành / Ban giám đốc | |
-| **Actor phụ** | Không | |
-| **Basic flow** | **Actor** | **System (Hệ thống)** |
-| | 1. Chọn chức năng “Đăng nhập” | 2. Hiển thị biểu mẫu đăng nhập |
-| | 3. Nhập số điện thoại/email và mật khẩu | 4. Kiểm tra tính hợp lệ của thông tin đăng nhập |
-| | 5. Chọn “Đăng nhập” | 6. Xác thực tài khoản |
-| | | 7. Xác định vai trò và quyền truy cập |
-| | | 8. Tạo phiên đăng nhập |
-| | | 9. Hiển thị giao diện phù hợp với vai trò |
-| | | 10. Kết thúc Use Case |
-| **Alternative flow** | **5.1 Người dùng hủy đăng nhập:** Người dùng chọn “Hủy” → Hệ thống không thực hiện đăng nhập → Quay về màn hình trước đó. | |
-| **Exception** | **6.1 Thông tin đăng nhập không chính xác:** Hệ thống phát hiện thông tin không chính xác → Hiển thị thông báo lỗi → Người dùng nhập lại thông tin → Quay lại bước 3.<br>**6.2 Tài khoản bị khóa:** Hệ thống phát hiện tài khoản bị khóa → Thông báo tài khoản không được phép đăng nhập → Kết thúc Use Case. | |
-
-
-### 8.3/ Đặc tả use case Cập nhật hồ sơ
-| Thành phần | Nội dung | |
-| :--- | :--- | :--- |
-| **Tên Use Case** | Cập nhật hồ sơ | |
-| **Tiền điều kiện** | Khách hàng hoặc tài xế đã đăng nhập thành công. | |
-| **Hậu điều kiện** | Thông tin hồ sơ mới được lưu thành công vào CSDL và hiển thị thông tin mới trên hệ thống. | |
-| **Actor chính** | Khách hàng / Tài xế | |
-| **Actor phụ** | Không | |
-| **Basic flow** | **Actor (Khách hàng / Tài xế)** | **System (Hệ thống)** |
-| | 1. Chọn chức năng “Hồ sơ cá nhân” | 2. Hiển thị thông tin hồ sơ hiện tại |
-| | 3. Chọn “Cập nhật hồ sơ” | 4. Hiển thị biểu mẫu cập nhật hồ sơ |
-| | 5. Chỉnh sửa thông tin cần thay đổi | 6. Kiểm tra tính hợp lệ của thông tin |
-| | 7. Chọn “Lưu” | 8. Hiển thị yêu cầu xác nhận cập nhật |
-| | 9. Chọn “Xác nhận” | 10. Lưu thông tin hồ sơ mới |
-| | | 11. Hiển thị thông báo “Cập nhật hồ sơ thành công” |
-| | | 12. Kết thúc Use Case |
-| **Alternative flow** | **9.1 Người dùng hủy cập nhật:** Người dùng chọn “Hủy” → Hệ thống không lưu thông tin mới → Giữ nguyên thông tin hồ sơ → Quay lại bước 2. | |
-| **Exception** | **6.1 Thông tin hồ sơ không hợp lệ:** Hệ thống phát hiện thông tin không đúng định dạng hoặc chưa đầy đủ → Hiển thị thông báo lỗi → Người dùng nhập lại thông tin → Quay lại bước 5. | |
-
-### 8.4/ Đặc tả use case Cập nhật thông tin phương tiện
-| Thành phần | Nội dung | |
-| :--- | :--- | :--- |
-| **Tên Use Case** | Cập nhật thông tin phương tiện | |
-| **Tiền điều kiện** | Tài xế hoặc nhân viên vận hành đã đăng nhập và có quyền cập nhật thông tin phương tiện. | |
-| **Hậu điều kiện** | Thông tin phương tiện được cập nhật thành công và lưu vào CSDL. | |
-| **Actor chính** | Tài xế | |
-| **Actor phụ** | Nhân viên vận hành | |
-| **Basic flow** | **Actor (Tài xế / Nhân viên vận hành)** | **System (Hệ thống)** |
-| | 1. Chọn chức năng “Thông tin phương tiện” | 2. Hiển thị danh sách phương tiện |
-| | 3. Chọn phương tiện cần cập nhật | 4. Hiển thị thông tin chi tiết phương tiện |
-| | 5. Chọn “Cập nhật” | 6. Hiển thị biểu mẫu cập nhật |
-| | 7. Nhập hoặc chỉnh sửa thông tin phương tiện | 8. Kiểm tra tính hợp lệ của thông tin |
-| | 9. Chọn “Lưu” | 10. Hiển thị yêu cầu xác nhận |
-| | 11. Chọn “Xác nhận” | 12. Lưu thông tin phương tiện |
-| | | 13. Hiển thị thông báo “Cập nhật thông tin phương tiện thành công” |
+| | 1. Chọn chức năng “Đăng ký tài khoản”. | 2. Hiển thị biểu mẫu đăng ký gồm: họ tên, số điện thoại, email và mật khẩu. |
+| | 3. Nhập họ tên, số điện thoại, email và mật khẩu. | 4. Tiếp nhận thông tin đăng ký. |
+| | | 5. Kiểm tra các thông tin bắt buộc gồm họ tên, số điện thoại, email và mật khẩu đã được nhập đầy đủ. |
+| | | 6. Kiểm tra định dạng họ tên, số điện thoại, email và mật khẩu theo quy định của hệ thống. |
+| | | 7. Kiểm tra số điện thoại và email chưa được sử dụng cho tài khoản khác. |
+| | 8. Chọn “Đăng ký”. | 9. Hiển thị thông tin đăng ký để khách hàng xác nhận. |
+| | 10. Chọn “Xác nhận”. | 11. Tạo tài khoản khách hàng với thông tin đăng ký hợp lệ. |
+| | | 12. Lưu thông tin tài khoản vào hệ thống. |
+| | | 13. Hiển thị thông báo “Đăng ký tài khoản thành công”. |
 | | | 14. Kết thúc Use Case |
-| **Alternative flow** | **11.1 Actor hủy cập nhật:** Actor chọn “Hủy” → Hệ thống không lưu thông tin mới → Giữ nguyên thông tin phương tiện → Quay lại bước 4. | |
-| **Exception** | **8.1 Thông tin phương tiện không hợp lệ:** Hệ thống phát hiện thông tin không đầy đủ hoặc sai định dạng → Thông báo lỗi → Actor nhập lại thông tin → Quay lại bước 7.<br>**8.2 Biển số xe đã tồn tại:** Hệ thống phát hiện biển số đã được đăng ký cho phương tiện khác → Thông báo lỗi → Actor nhập lại biển số → Quay lại bước 7. | |
+| **Alternative flow** | **9.1 Khách hàng hủy xác nhận đăng ký:** Khách hàng chọn “Hủy” → Hệ thống không tạo tài khoản → Giữ lại thông tin đã nhập → Quay lại bước 8.<br><br>**2.1 Khách hàng hủy đăng ký:** Khách hàng chọn “Hủy đăng ký” → Hệ thống không tạo tài khoản → Quay về màn hình trước đó → Kết thúc Use Case. | |
+| **Exception** | **5.1 Thiếu họ tên:** Hệ thống phát hiện chưa nhập họ tên → Thông báo lỗi → Khách hàng bổ sung họ tên → Quay lại bước 3.<br><br>**5.2 Thiếu số điện thoại:** Hệ thống phát hiện chưa nhập số điện thoại → Thông báo lỗi → Khách hàng bổ sung số điện thoại → Quay lại bước 3.<br><br>**5.3 Thiếu email:** Hệ thống phát hiện chưa nhập email → Thông báo lỗi → Khách hàng bổ sung email → Quay lại bước 3.<br><br>**5.4 Thiếu mật khẩu:** Hệ thống phát hiện chưa nhập mật khẩu → Thông báo lỗi → Khách hàng bổ sung mật khẩu → Quay lại bước 3.<br><br>**6.1 Họ tên không hợp lệ:** Hệ thống phát hiện họ tên không đúng định dạng → Thông báo lỗi → Khách hàng nhập lại họ tên → Quay lại bước 3.<br><br>**6.2 Số điện thoại không hợp lệ:** Hệ thống phát hiện số điện thoại không đúng định dạng → Thông báo lỗi → Khách hàng nhập lại số điện thoại → Quay lại bước 3.<br><br>**6.3 Email không hợp lệ:** Hệ thống phát hiện email không đúng định dạng → Thông báo lỗi → Khách hàng nhập lại email → Quay lại bước 3.<br><br>**6.4 Mật khẩu không hợp lệ:** Hệ thống phát hiện mật khẩu không đáp ứng định dạng → Thông báo lỗi → Khách hàng nhập lại mật khẩu → Quay lại bước 3.<br><br>**7.1 Số điện thoại đã được sử dụng:** Hệ thống phát hiện số điện thoại đã tồn tại → Thông báo lỗi → Khách hàng nhập số điện thoại khác → Quay lại bước 3.<br><br>**7.2 Email đã được sử dụng:** Hệ thống phát hiện email đã tồn tại → Thông báo lỗi → Khách hàng nhập email khác → Quay lại bước 3.<br><br>**12.1 Không thể lưu tài khoản:** Hệ thống không thể lưu thông tin tài khoản → Thông báo đăng ký không thành công → Không tạo tài khoản → Kết thúc Use Case. | |
 
-### 8.5/ Đặc tả use case Đặt xe
+### 8.2/ Đặc tả use case Đăng nhập và quản lý thông tin khách hàng
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
-| **Tên Use Case** | Đặt xe | |
-| **Tiền điều kiện** | Khách hàng đã đăng nhập thành công và dịch vụ đặt xe đang hoạt động. | |
-| **Hậu điều kiện** | Yêu cầu đặt xe được tạo thành công. Hệ thống bắt đầu tìm và phân công tài xế, đồng thời cập nhật trạng thái cho khách hàng. | |
+| **Tên Use Case** | Đăng nhập và quản lý thông tin khách hàng | |
+| **Tiền điều kiện** | - Khách hàng đã có tài khoản trên hệ thống.<br>- Hệ thống đang hoạt động bình thường. | |
+| **Hậu điều kiện** | - Khách hàng đăng nhập thành công.<br>- Thông tin khách hàng được cập nhật và lưu thành công nếu có thay đổi. | |
 | **Actor chính** | Khách hàng | |
-| **Actor phụ** | Không | |
+| **Actor phụ** | Không có | |
 | **Basic flow** | **Actor (Khách hàng)** | **System (Hệ thống)** |
-| | 1. Chọn chức năng “Đặt xe” | 2. Hiển thị giao diện đặt xe |
-| | 3. Nhập điểm đón và điểm đến | 4. Kiểm tra thông tin địa điểm |
-| | 5. Chọn loại dịch vụ/loại xe | 6. Hiển thị thông tin chuyến và cước dự kiến |
-| | 7. Kiểm tra thông tin đặt xe | 8. Hiển thị yêu cầu xác nhận đặt xe |
-| | 9. Chọn “Xác nhận đặt xe” | 10. Tạo yêu cầu đặt xe |
-| | | 11. Thực hiện UC06 – Tìm và phân công tài xế |
-| | | 12. Hiển thị trạng thái tìm tài xế |
-| | | 13. Gửi thông báo cho khách hàng khi có kết quả phân công |
-| | | 14. Kết thúc Use Case |
-| **Alternative flow** | **7.1 Khách hàng thay đổi thông tin đặt xe:** Khách hàng chỉnh sửa điểm đón, điểm đến hoặc loại xe → Hệ thống kiểm tra thông tin mới → Tính lại cước dự kiến → Quay lại bước 7.<br>**9.1 Khách hàng hủy đặt xe:** Khách hàng chọn “Hủy” → Hệ thống không tạo yêu cầu đặt xe → Quay về giao diện chính → Kết thúc Use Case. | |
-| **Exception** | **4.1 Địa điểm không hợp lệ:** Hệ thống không xác định được điểm đón hoặc điểm đến → Hiển thị thông báo lỗi → Khách hàng nhập lại địa điểm → Quay lại bước 3.<br>**10.1 Không thể tạo yêu cầu đặt xe:** Hệ thống phát hiện lỗi khi lưu yêu cầu → Thông báo lỗi → Khách hàng thực hiện lại thao tác → Quay lại bước 7. | |
+| | **1.** Chọn chức năng **“Đăng nhập”**. | **2.** Hiển thị màn hình đăng nhập và yêu cầu khách hàng nhập thông tin đăng nhập. |
+| | **3.** Nhập thông tin tài khoản và mật khẩu. | **4.** Tiếp nhận thông tin đăng nhập. |
+| | | **5.** Kiểm tra thông tin đăng nhập đã được nhập đầy đủ. |
+| | | **6.** Kiểm tra thông tin tài khoản và mật khẩu có hợp lệ hay không. |
+| | | **7.** Xác nhận thông tin đăng nhập hợp lệ. |
+| | | **8.** Cho phép khách hàng đăng nhập và hiển thị thông tin khách hàng. |
+| | **9.** Chọn chức năng quản lý thông tin cá nhân. | **10.** Hiển thị thông tin khách hàng hiện tại. |
+| | **11.** Chỉnh sửa thông tin cần thay đổi. | **12.** Tiếp nhận thông tin được chỉnh sửa. |
+| | | **13.** Kiểm tra tính hợp lệ của thông tin được cập nhật. |
+| | **14.** Xác nhận cập nhật thông tin. | **15.** Lưu thông tin khách hàng đã cập nhật. |
+| | | **16.** Thông báo cập nhật thông tin thành công. |
+| | | **17.** Use Case kết thúc. |
+| **Alternative flow** | **2.1 Khách hàng hủy đăng nhập:** Khách hàng chọn “Hủy đăng nhập” → Hệ thống không thực hiện xác thực → Quay về màn hình trước đó → Kết thúc Use Case.<br><br>**10.1 Khách hàng không chỉnh sửa thông tin:** Khách hàng không thay đổi thông tin → Hệ thống giữ nguyên thông tin hiện tại → Kết thúc Use Case.<br><br>**12.1 Khách hàng hủy cập nhật thông tin:** Khách hàng chọn “Hủy” → Hệ thống không lưu thông tin đã chỉnh sửa → Giữ lại thông tin hiện tại → Kết thúc Use Case. | |
+| **Exception** | **5.1 Thiếu thông tin đăng nhập:** Hệ thống phát hiện chưa nhập đầy đủ thông tin đăng nhập → Thông báo lỗi → Khách hàng bổ sung thông tin còn thiếu → Quay lại bước 3.<br><br>**6.1 Thông tin tài khoản không hợp lệ:** Hệ thống phát hiện thông tin tài khoản không hợp lệ → Thông báo lỗi → Khách hàng nhập lại thông tin tài khoản → Quay lại bước 3.<br><br>**6.2 Mật khẩu không hợp lệ:** Hệ thống phát hiện mật khẩu không hợp lệ → Thông báo lỗi → Khách hàng nhập lại mật khẩu → Quay lại bước 3.<br><br>**13.1 Thông tin cập nhật không hợp lệ:** Hệ thống phát hiện thông tin được cập nhật không hợp lệ → Thông báo lỗi → Khách hàng chỉnh sửa lại thông tin → Quay lại bước 11.<br><br>**15.1 Không thể lưu thông tin:** Hệ thống không thể lưu thông tin khách hàng đã cập nhật → Thông báo lỗi → Không thay đổi thông tin hiện tại → Kết thúc Use Case. | |
 
-### 8.6/ Đặc tả use case Tìm và phân công tài xế
+
+### 8.3/ Đặc tả use case Tạo yêu cầu đặt xe
+| Thành phần | Nội dung | |
+| :--- | :--- | :--- |
+| **Tên Use Case** | Tạo yêu cầu đặt xe | |
+| **Tiền điều kiện** | - Khách hàng đã đăng nhập vào hệ thống.<br>- Hệ thống đang hoạt động bình thường. | |
+| **Hậu điều kiện** | - Yêu cầu đặt xe của khách hàng được hệ thống tiếp nhận.<br>- Yêu cầu đặt xe được chuyển sang quá trình tìm và phân công tài xế. | |
+| **Actor chính** | Khách hàng | |
+| **Actor phụ** | Không có | |
+| **Basic flow** | **Actor (Khách hàng)** | **System (Hệ thống)** |
+| | **1.** Chọn chức năng **“Đặt xe”**. | **2.** Hiển thị giao diện tạo yêu cầu đặt xe. |
+| | **3.** Nhập **điểm đón, điểm đến và loại phương tiện**. | **4.** Tiếp nhận thông tin yêu cầu đặt xe. |
+| | | **5.** Kiểm tra yêu cầu đã có đầy đủ **điểm đón, điểm đến và loại phương tiện**. |
+| | | **6.** Xác nhận thông tin yêu cầu đặt xe hợp lệ. |
+| | **7.** Xác nhận gửi yêu cầu đặt xe. | **8.** Tiếp nhận yêu cầu đặt xe. |
+| | | **9.** Ghi nhận yêu cầu đặt xe và chuyển sang quá trình tìm và phân công tài xế. |
+| | | **10.** Thông báo yêu cầu đặt xe đã được tiếp nhận. |
+| | | **11.** Use Case kết thúc. |
+| **Alternative flow** | **3.1 Khách hàng thay đổi thông tin đặt xe:** Khách hàng chỉnh sửa điểm đón, điểm đến hoặc loại phương tiện → Hệ thống tiếp nhận thông tin mới → Quay lại bước 5.<br><br>**7.1 Khách hàng hủy gửi yêu cầu:** Khách hàng chọn “Hủy” → Hệ thống không tạo yêu cầu đặt xe → Quay lại giao diện trước đó → Kết thúc Use Case. | |
+| **Exception** | **5.1 Thiếu điểm đón:** Hệ thống phát hiện chưa nhập điểm đón → Thông báo lỗi → Khách hàng bổ sung điểm đón → Quay lại bước 3.<br><br>**5.2 Thiếu điểm đến:** Hệ thống phát hiện chưa nhập điểm đến → Thông báo lỗi → Khách hàng bổ sung điểm đến → Quay lại bước 3.<br><br>**5.3 Thiếu loại phương tiện:** Hệ thống phát hiện chưa chọn loại phương tiện → Thông báo lỗi → Khách hàng chọn loại phương tiện → Quay lại bước 3. | |
+
+### 8.4/ Đặc tả use case Theo dõi yêu cầu và chuyến đi
+| Thành phần | Nội dung | |
+| :--- | :--- | :--- |
+| **Tên Use Case** | Theo dõi yêu cầu và chuyến đi | |
+| **Tiền điều kiện** | - Khách hàng đã đăng nhập vào hệ thống.<br>- Khách hàng đã gửi yêu cầu đặt xe. | |
+| **Hậu điều kiện** | - Khách hàng xem được trạng thái tìm tài xế, tài xế nhận chuyến, thời gian dự kiến tài xế đến và trạng thái chuyến đi. | |
+| **Actor chính** | Khách hàng | |
+| **Actor phụ** | Không có | |
+| **Basic flow** | **Actor (Khách hàng)** | **System (Hệ thống)** |
+| | **1.** Chọn chức năng **“Theo dõi yêu cầu và chuyến đi”**. | **2.** Hiển thị thông tin yêu cầu và trạng thái hiện tại của chuyến đi. |
+| | | **3.** Hiển thị trạng thái **“đang tìm tài xế”** khi hệ thống đang thực hiện tìm tài xế. |
+| | | **4.** Cập nhật và hiển thị thông tin tài xế khi có tài xế nhận chuyến. |
+| | | **5.** Hiển thị **thời gian dự kiến tài xế đến**. |
+| | | **6.** Cập nhật trạng thái chuyến đi trong quá trình thực hiện chuyến. |
+| | **7.** Theo dõi thông tin và trạng thái chuyến đi trên hệ thống. | **8.** Tiếp tục cập nhật thông tin trạng thái chuyến đi. |
+| | | **9.** Khi chuyến đi hoàn thành, hiển thị trạng thái **“hoàn thành chuyến”**. |
+| | | **10.** Use Case kết thúc. |
+| **Alternative flow** | **3.1 Chưa tìm được tài xế:** Hệ thống tiếp tục hiển thị trạng thái đang tìm tài xế → Khách hàng tiếp tục theo dõi trạng thái yêu cầu → Quay lại bước 3.<br><br>**6.1 Chuyến đi chuyển sang trạng thái khác:** Hệ thống nhận được trạng thái mới của chuyến đi → Cập nhật trạng thái hiển thị cho khách hàng → Tiếp tục theo dõi chuyến đi → Quay lại bước 6. | |
+| **Exception** | **2.1 Không có thông tin yêu cầu đặt xe:** Hệ thống không tìm thấy yêu cầu đặt xe cần theo dõi → Thông báo không có yêu cầu đặt xe để theo dõi → Kết thúc Use Case.<br><br>**2.2 Không thể tải thông tin chuyến đi:** Hệ thống không thể lấy thông tin yêu cầu hoặc trạng thái chuyến đi → Thông báo lỗi → Kết thúc Use Case.<br><br>**8.1 Không thể cập nhật trạng thái chuyến đi:** Hệ thống không thể cập nhật trạng thái mới → Thông báo lỗi → Giữ trạng thái đang hiển thị → Kết thúc Use Case. | |
+
+### 8.5/ Đặc tả use case Tra cứu lịch sử và thông tin chuyến đi
+| Thành phần | Nội dung | |
+| :--- | :--- | :--- |
+| **Tên Use Case** | Tra cứu lịch sử và thông tin chuyến đi | |
+| **Tiền điều kiện** | - Khách hàng đã đăng nhập vào hệ thống.<br>- Khách hàng đã có thông tin chuyến đi trên hệ thống. | |
+| **Hậu điều kiện** | - Khách hàng xem được lịch sử chuyến đi và thông tin của chuyến đi đã chọn.<br>- Khách hàng xem được số tiền phải trả của chuyến đi. | |
+| **Actor chính** | Khách hàng | |
+| **Actor phụ** | Không có | |
+| **Basic flow** | **Actor (Khách hàng)** | **System (Hệ thống)** |
+| | **1.** Chọn chức năng **“Tra cứu lịch sử và thông tin chuyến đi”**. | **2.** Hiển thị danh sách lịch sử chuyến đi của khách hàng. |
+| | **3.** Chọn một chuyến đi trong danh sách lịch sử. | **4.** Hiển thị thông tin của chuyến đi được chọn. |
+| | | **5.** Hiển thị số tiền khách hàng phải trả của chuyến đi. |
+| | **6.** Xem thông tin chuyến đi và số tiền phải trả. | **7.** Kết thúc quá trình tra cứu. |
+| | | **8.** Use Case kết thúc. |
+| **Alternative flow** | **2.1 Khách hàng không chọn chuyến đi:** Khách hàng xem danh sách lịch sử chuyến đi nhưng không chọn chuyến đi → Hệ thống giữ nguyên danh sách lịch sử → Kết thúc Use Case.<br><br>**4.1 Khách hàng chọn chuyến đi khác:** Khách hàng chọn một chuyến đi khác trong danh sách → Hệ thống hiển thị thông tin của chuyến đi được chọn → Quay lại bước 5. | |
+| **Exception** | **2.1 Không có lịch sử chuyến đi:** Hệ thống không có thông tin chuyến đi của khách hàng → Thông báo không có lịch sử chuyến đi → Kết thúc Use Case.<br><br>**4.1 Không thể tải thông tin chuyến đi:** Hệ thống không thể lấy thông tin của chuyến đi được chọn → Thông báo lỗi → Kết thúc Use Case.<br><br>**5.1 Không thể hiển thị số tiền phải trả:** Hệ thống không thể lấy thông tin số tiền phải trả của chuyến đi → Thông báo lỗi → Kết thúc Use Case. | |
+
+### 8.6/ Đặc tả use case Đánh giá tài xế
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
 | **Tên Use Case** | Tìm và phân công tài xế | |
@@ -336,7 +341,7 @@ flowchart LR
 | **Alternative flow** | **9.1 Tài xế chọn “Từ chối”:** Hệ thống ghi nhận tài xế từ chối → Tìm tài xế phù hợp tiếp theo → Gửi yêu cầu cho tài xế tiếp theo → Quay lại bước 6.<br>**8.1 Tài xế không phản hồi:** Hệ thống xác định tài xế hết thời gian phản hồi → Ghi nhận trạng thái “Không phản hồi” → Tìm tài xế tiếp theo → Quay lại bước 5. | |
 | **Exception** | **3.1 Không có tài xế phù hợp:** Hệ thống xác định không có tài xế đáp ứng điều kiện → Cập nhật trạng thái yêu cầu → Thông báo cho khách hàng → Kết thúc Use Case.<br>**10.1 Chuyến đã được tài xế khác nhận:** Hệ thống phát hiện chuyến không còn khả dụng → Thông báo cho tài xế → Kết thúc yêu cầu phân công đối với tài xế này. | |
 
-### 8.7/ Đặc tả use case Nhận hoặc từ chối chuyến
+### 8.7/ Đặc tả use case Đăng ký và quản lý tài khoản tài xế
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
 | **Tên Use Case** | Nhận hoặc từ chối chuyến | |
@@ -355,7 +360,7 @@ flowchart LR
 | **Alternative flow** | **5.1 Tài xế chọn “Từ chối”:** Hệ thống ghi nhận tài xế từ chối → Cập nhật trạng thái yêu cầu → Thực hiện UC06 để tìm tài xế khác → Kết thúc Use Case. | |
 | **Exception** | **6.1 Chuyến đã được tài xế khác nhận:** Hệ thống phát hiện chuyến không còn khả dụng → Thông báo cho tài xế → Cập nhật danh sách chuyến → Kết thúc Use Case. | |
 
-### 8.8/ Đặc tả use case Theo dõi và cập nhật chuyến đi
+### 8.8/ Đặc tả use case Quản lý hồ sơ và phương tiện
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
 | **Tên Use Case** | Theo dõi và cập nhật chuyến đi | |
@@ -378,7 +383,7 @@ flowchart LR
 | **Alternative flow** | **5.1 Tài xế chưa thể đến điểm đón:** Tài xế tiếp tục di chuyển → Hệ thống giữ nguyên trạng thái chuyến → Khi đến điểm đón, quay lại bước 5.<br>**13.1 Tài xế chưa thể hoàn thành chuyến:** Tài xế tiếp tục thực hiện chuyến → Hệ thống giữ nguyên trạng thái “Đang thực hiện chuyến” → Khi đến điểm đến, quay lại bước 13. | |
 | **Exception** | **14.1 Không đủ điều kiện hoàn thành chuyến:** Hệ thống phát hiện thông tin chuyến chưa đầy đủ → Hiển thị thông báo lỗi → Tài xế bổ sung thông tin → Quay lại bước 13. | |
 
-### 8.9/ Đặc tả use case Cập nhật vị trí tài xế
+### 8.9/ Đặc tả use case Quản lý trạng thái tài xế
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
 | **Tên Use Case** | Cập nhật vị trí tài xế | |
@@ -397,7 +402,7 @@ flowchart LR
 | **Alternative flow** | **1.1 Tài xế chưa cho phép truy cập vị trí:** Hệ thống hiển thị yêu cầu cấp quyền → Tài xế cho phép truy cập → Hệ thống xác nhận quyền → Quay lại bước 3. | |
 | **Exception** | **4.1 Không nhận được dữ liệu vị trí:** Hệ thống phát hiện dữ liệu vị trí bị gián đoạn → Ghi nhận trạng thái vị trí không khả dụng → Thông báo cho tài xế → Tiếp tục thử nhận dữ liệu vị trí. | |
 
-### 8.10/ Đặc tả use case Tính cước chuyến đi
+### 8.10/ Đặc tả use case Tiếp nhận và phản hồi chuyến
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
 | **Tên Use Case** | Tính cước chuyến đi | |
@@ -417,7 +422,7 @@ flowchart LR
 | **Alternative flow** | **4.1 Hệ thống áp dụng phụ phí:** Hệ thống xác định chuyến thuộc trường hợp áp dụng phụ phí → Tính thêm phụ phí theo cấu hình → Cập nhật lại tổng cước → Quay lại bước 5. | |
 | **Exception** | **2.1 Không có bảng giá phù hợp:** Hệ thống không tìm thấy bảng giá → Thông báo không thể tính cước → Không lưu kết quả → Kết thúc Use Case.<br>**5.1 Kết quả tính cước không hợp lệ:** Hệ thống phát hiện kết quả không hợp lệ → Ghi nhận lỗi → Thông báo không thể hoàn tất tính cước → Kết thúc Use Case. | |
 
-### 8.11/ Đặc tả use case Thanh toán chuyến đi
+### 8.11/ Đặc tả use case Cập nhật trạng thái thực hiện chuyến
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
 | **Tên Use Case** | Thanh toán chuyến đi | |
@@ -439,7 +444,7 @@ flowchart LR
 | **Alternative flow** | **1.1 Khách hàng chọn thanh toán tiền mặt:** Khách hàng chọn “Tiền mặt” → Hệ thống ghi nhận phương thức thanh toán → Cập nhật trạng thái thanh toán theo quy trình tiền mặt → Kết thúc Use Case.<br>**3.1 Khách hàng hủy thanh toán:** Khách hàng chọn “Hủy” → Hệ thống không gửi yêu cầu thanh toán → Giữ nguyên trạng thái thanh toán → Kết thúc Use Case. | |
 | **Exception** | **7.1 Thanh toán thất bại:** Hệ thống nhận kết quả thất bại → Cập nhật trạng thái “Thất bại” → Lưu giao dịch → Thông báo cho khách hàng → Cho phép thanh toán lại theo chính sách.<br>**5.1 Nhà cung cấp thanh toán không phản hồi:** Hệ thống không nhận được kết quả → Ghi nhận giao dịch “Đang xử lý” → Thông báo cho khách hàng → Kết thúc Use Case. | |
 
-### 8.12/ Đặc tả use case Gửi và tiếp nhận thông báo
+### 8.12/ Đặc tả use case Cập nhật và lưu vị trí tài xế
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
 | **Tên Use Case** | Gửi và tiếp nhận thông báo | |
@@ -460,7 +465,7 @@ flowchart LR
 | **Alternative flow** | **7.1 Hệ thống thực hiện gửi lại thông báo:** Hệ thống phát hiện thông báo chưa được gửi thành công → Tạo yêu cầu gửi lại → Nhà cung cấp tiếp nhận → Hệ thống cập nhật kết quả gửi. | |
 | **Exception** | **8.1 Nhà cung cấp thông báo không phản hồi:** Hệ thống không nhận được kết quả gửi → Ghi nhận trạng thái “Không xác định” → Ghi log sự kiện → Kết thúc Use Case. | |
 
-### 8.13/ Đặc tả use case Xem lịch sử chuyến đi
+### 8.13/ Đặc tả use case Tìm và phân công tài xế
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
 | **Tên Use Case** | Xem lịch sử chuyến đi | |
@@ -477,7 +482,7 @@ flowchart LR
 | **Alternative flow** | **4.1 Khách hàng không sử dụng bộ lọc:** Hệ thống giữ nguyên danh sách lịch sử → Khách hàng chọn chuyến cần xem → Quay lại bước 6. | |
 | **Exception** | **2.1 Không có lịch sử chuyến đi:** Hệ thống không tìm thấy chuyến đi → Hiển thị thông báo “Chưa có lịch sử chuyến đi” → Kết thúc Use Case. | |
 
-### 8.14/ Đặc tả use case Đánh giá tài xế
+### 8.14/ Đặc tả use case Xử lý không tìm được tài xế
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
 | **Tên Use Case** | Đánh giá tài xế | |
@@ -496,7 +501,7 @@ flowchart LR
 | **Alternative flow** | **9.1 Khách hàng hủy đánh giá:** Khách hàng chọn “Hủy” → Hệ thống không lưu đánh giá → Quay lại thông tin chuyến → Kết thúc Use Case. | |
 | **Exception** | **6.1 Mức đánh giá không hợp lệ:** Hệ thống phát hiện chưa chọn mức đánh giá → Hiển thị thông báo lỗi → Khách hàng chọn lại mức đánh giá → Quay lại bước 5.<br>**10.1 Không thể lưu đánh giá:** Hệ thống phát hiện lỗi khi lưu → Thông báo lỗi → Khách hàng thực hiện lại → Quay lại bước 7. | |
 
-### 8.15/ Đặc tả use case Tra cứu và cập nhật thông tin đối tượng
+### 8.15/ Đặc tả use case Tính cước chuyến đi
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
 | **Tên Use Case** | Tra cứu và cập nhật thông tin đối tượng | |
@@ -519,7 +524,7 @@ flowchart LR
 | **Alternative flow** | **5.1 Nhân viên không nhập điều kiện tìm kiếm:** Hệ thống hiển thị danh sách đối tượng theo mặc định → Nhân viên chọn đối tượng cần xem → Quay lại bước 7.<br>**15.1 Nhân viên hủy cập nhật:** Nhân viên chọn “Hủy” → Hệ thống không lưu thông tin mới → Giữ nguyên dữ liệu hiện tại → Quay lại bước 8. | |
 | **Exception** | **6.1 Không tìm thấy đối tượng:** Hệ thống không tìm thấy dữ liệu phù hợp → Hiển thị thông báo “Không tìm thấy dữ liệu” → Nhân viên nhập lại điều kiện → Quay lại bước 5.<br>**12.1 Thông tin cập nhật không hợp lệ:** Hệ thống phát hiện thông tin không hợp lệ → Hiển thị thông báo lỗi → Nhân viên chỉnh sửa → Quay lại bước 11. | |
 
-### 8.16/ Đặc tả use case Hỗ trợ và xử lý chuyến
+### 8.16/ Đặc tả use case Thanh toán chuyến đi
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
 | **Tên Use Case** | Hỗ trợ và xử lý chuyến | |
@@ -539,7 +544,7 @@ flowchart LR
 | **Alternative flow** | **7.1 Nhân viên chỉ ghi nhận sự cố:** Nhân viên nhập nội dung sự cố → Hệ thống lưu thông tin sự cố → Giữ nguyên trạng thái chuyến → Kết thúc Use Case.<br>**9.1 Nhân viên hủy xử lý:** Nhân viên chọn “Hủy” → Hệ thống không thay đổi trạng thái chuyến → Giữ nguyên thông tin hiện tại → Kết thúc Use Case. | |
 | **Exception** | **8.1 Nhân viên không có quyền xử lý:** Hệ thống phát hiện không có quyền → Từ chối thao tác → Hiển thị thông báo lỗi → Ghi log → Kết thúc Use Case.<br>**10.1 Không thể cập nhật trạng thái chuyến:** Hệ thống phát hiện lỗi → Không lưu thay đổi → Thông báo lỗi → Nhân viên thực hiện lại → Quay lại bước 7. | |
 
-### 8.17/ Đặc tả use case Tra cứu giao dịch
+### 8.17/ Đặc tả use case Thông báo khách hàng
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
 | **Tên Use Case** | Tra cứu giao dịch | |
@@ -557,7 +562,7 @@ flowchart LR
 | **Alternative flow** | **5.1 Nhân viên thay đổi điều kiện tìm kiếm:** Nhân viên nhập lại điều kiện → Hệ thống thực hiện tìm kiếm theo điều kiện mới → Quay lại bước 7. | |
 | **Exception** | **6.1 Không tìm thấy giao dịch:** Hệ thống không tìm thấy giao dịch phù hợp → Hiển thị thông báo “Không tìm thấy giao dịch” → Nhân viên nhập lại điều kiện → Quay lại bước 3.<br>**6.2 Lỗi truy xuất dữ liệu:** Hệ thống phát hiện lỗi → Hiển thị thông báo lỗi → Ghi nhận lỗi vào log → Kết thúc Use Case. | |
 
-### 8.18/ Đặc tả use case Xem báo cáo hoạt động
+### 8.18/ Đặc tả use case Thông báo tài xế
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
 | **Tên Use Case** | Xem báo cáo hoạt động | |
@@ -575,7 +580,7 @@ flowchart LR
 | **Alternative flow** | **5.1 Actor thay đổi điều kiện báo cáo:** Actor thay đổi khoảng thời gian hoặc điều kiện lọc → Hệ thống tổng hợp lại dữ liệu → Quay lại bước 7. | |
 | **Exception** | **6.1 Không có dữ liệu phù hợp:** Hệ thống không tìm thấy dữ liệu → Hiển thị thông báo “Không có dữ liệu phù hợp” → Actor thay đổi điều kiện → Quay lại bước 5.<br>**6.2 Lỗi tổng hợp dữ liệu:** Hệ thống phát hiện lỗi → Thông báo không thể tạo báo cáo → Ghi nhận lỗi → Kết thúc Use Case. | |
 
-### 8.19/ Đặc tả use case Phân quyền người dùng
+### 8.19/ Đặc tả use case Quản lý hoạt động vận hành
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
 | **Tên Use Case** | Phân quyền người dùng | |
@@ -595,7 +600,7 @@ flowchart LR
 | **Alternative flow** | **9.1 Nhân viên hủy thay đổi quyền:** Nhân viên chọn “Hủy” → Hệ thống không cập nhật quyền → Giữ nguyên quyền hiện tại → Kết thúc Use Case. | |
 | **Exception** | **6.1 Nhân viên không có quyền phân quyền:** Hệ thống phát hiện nhân viên không có quyền → Từ chối thao tác → Hiển thị thông báo lỗi → Ghi nhận sự kiện vào log → Kết thúc Use Case.<br>**10.1 Không thể cập nhật quyền:** Hệ thống phát hiện lỗi khi lưu → Không cập nhật quyền mới → Hiển thị thông báo lỗi → Nhân viên thực hiện lại → Quay lại bước 5. | |
 
-### 8.20/ Đặc tả use case Thiết lập cấu hình hệ thống
+### 8.20/ Đặc tả use case Theo dõi và xử lý chuyến đi
 | Thành phần | Nội dung | |
 | :--- | :--- | :--- |
 | **Tên Use Case** | Thiết lập cấu hình hệ thống | |
@@ -615,6 +620,18 @@ flowchart LR
 | | | 14. Kết thúc Use Case |
 | **Alternative flow** | **9.1 Nhân viên hủy thay đổi cấu hình:** Nhân viên chọn “Hủy” → Hệ thống không lưu cấu hình mới → Giữ nguyên cấu hình hiện tại → Kết thúc Use Case. | |
 | **Exception** | **6.1 Giá trị cấu hình không hợp lệ:** Hệ thống phát hiện giá trị không nằm trong phạm vi cho phép → Hiển thị thông báo lỗi → Nhân viên nhập lại giá trị → Quay lại bước 5.<br>**10.1 Không thể lưu cấu hình:** Hệ thống phát hiện lỗi khi lưu → Không áp dụng cấu hình mới → Hiển thị thông báo lỗi → Nhân viên thực hiện lại → Quay lại bước 7. | |
+
+
+### 8.21/ Đặc tả use case Tra cứu lịch sử giao dịch
+
+### 8.22/ Đặc tả use case Báo cáo hoạt động
+
+### 8.23/ Đặc tả use case Xác thực người dùng
+
+### 8.24/ Đặc tả use case Phân quyền quản trị
+
+### 8.25/ Đặc tả use case Lưu vết thao tác quan trọng
+
 
 ## 9/ Phân tích quy trình nghiệp vụ (Business Project)
 
